@@ -1,0 +1,106 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <H2>Enter the Values</H2>
+        
+        
+            <form onsubmit="return results()" method="post" action="mailto:jason@tripwiremedia.com">
+                <H3>How would you rate the current level of  of your brand/business with your target market?</H3>
+                <input id="selection1" type="radio" name="awareness" value="10"/><label for="selection1">10</label></br>
+                <input id="selection2" type="radio" name="awareness" value="20" /><label for="selection2">20</label></br>
+                <input id="selection3" type="radio" name="awareness" value="30" /><label for="selection3">30</label></br>
+                <button type="submit">Submit that shit</button>
+            </form>
+            
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+        <h1>
+            <div style= "background-image: url('http://i.imgur.com/yf6d9SX.jpg'); width:fit-content ; height:fit-content;">
+                <canvas id="radarchart" height="500" width="500" style="display: block; height: 500px; width: 500px;">
+            </div>
+        </h1>
+        <script>
+            // Select all of the radio options for "Awareness"
+            const awarenessChoices = document.querySelectorAll(`[name="awareness"]`);
+            // Assign an initial value to the "Awareness" score. If a radio option is selected it will use this value otherwise it will be 0.
+            let awareness = document.querySelector(`[name="awareness"]:checked`) ? parseInt(document.querySelector(`[name="awareness"]:checked`).value) : 0;    
+            
+            var ctx = document.getElementById("radarchart");
+            var data = {
+                labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', ''],
+                datasets: [{
+                    label: "Marketing Needs",
+                    backgroundColor: "rgba(179,181,198,0.2)",
+                    borderColor: "#3385FF",
+                    pointBackgroundColor: "#3385FF",
+                    pointBorderColor: "#fff",
+                    pointHoverBackgroundColor: "#3385FF",
+                    pointHoverBorderColor: "#3385FF",
+                    data: [
+                        `${awareness}`, // Initialize the value at the currently selected option on page load.
+                        45, 
+                        25, 
+                        90, 
+                        60, 
+                        55, 
+                        50, 
+                        50, 
+                        50,
+                        12,
+                        60,
+                        45,
+                        10,
+                        5,
+                        90
+                    ]
+                }] 
+            };
+            var myRadarChart = new Chart(ctx, {
+            type: 'radar',
+            data: data,
+            options: {
+                scale: {
+                    responsive: true,
+                    ticks: {min: 0, max: 100},
+                    ineArc: false,
+                    pointLabels: {fontSize: 14},
+                },
+            scaleFontSize: 0,
+            legend: {display: true},
+            }
+        });
+
+        // The updateChart function takes an event, checks which array index of the data values needs updating, updates the value, then refreshes the chart.
+        function updateChart(event) {
+            dataPoint = parseInt(this.value);
+            switch (this.name) {
+                case 'awareness':
+                    myRadarChart.data.datasets[0].data[0] = dataPoint;
+                    // addData(myRadarChart, this.name, dataPoint);
+                    myRadarChart.update();
+                    break;
+                default:
+                    break;
+            }
+        };
+        
+        // Add an event listener for each "awareness" radio button. If it changes then the updateChart function is fired off.
+        [...awarenessChoices].forEach(option => {
+            option.addEventListener('change', updateChart);
+        });
+
+        function results() {
+            if (document.getElementById("selection1").checked) {
+                awareness = document.getElementById("selection1").value;
+            }   else if (document.getElementById("selection2").checked) {
+                awareness = document.getElementById("selection2").value;
+            }   else {
+                awareness = document.getElementbyId("selection3").value;
+            }
+// testing 
+        document.write("Thanks for selecting " + awareness); 
+        };
+        </script>
+    </body>
+</html>
