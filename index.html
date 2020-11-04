@@ -6,18 +6,25 @@
         <H2>Enter the Values</H2>
         
         
-            <form onsubmit="return results()" method="post" action="mailto:jason@tripwiremedia.com">
+            <form>
                 <H3>How would you rate the current level of  of your brand/business with your target market?</H3>
-                <input id="selection1" type="radio" name="awareness" value="10"/><label for="selection1">10</label></br>
-                <input id="selection2" type="radio" name="awareness" value="20" /><label for="selection2">20</label></br>
-                <input id="selection3" type="radio" name="awareness" value="30" /><label for="selection3">30</label></br>
+                <input id="s1" type="radio" name="awareness" value="10"/><label for="s1">10</label>
+                <input id="s2" type="radio" name="awareness" value="20" /><label for="s2">20</label>
+                <input id="s3" type="radio" name="awareness" value="30" /><label for="s3">30</label>
+                <input id="s4" type="radio" name="awareness" value="40"/><label for="s4">10</label>
+                <input id="s5" type="radio" name="awareness" value="50" /><label for="s5">20</label>
+                <input id="s6" type="radio" name="awareness" value="60" /><label for="s6">30</label>
+                <input id="s7" type="radio" name="awareness" value="70"/><label for="s7">10</label>
+                <input id="s8" type="radio" name="awareness" value="80" /><label for="s8">20</label>
+                <input id="s9" type="radio" name="awareness" value="90" /><label for="s9">30</label>
+                <input id="s10" type="radio" name="awareness" value="100" /><label for="s10">30</label>
                 <button type="submit">Submit that shit</button>
             </form>
             
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
         <h1>
-            <div style= "background-image: url('http://i.imgur.com/yf6d9SX.jpg'); width:fit-content ; height:fit-content;">
-                <canvas id="radarchart" height="500" width="500" style="display: block; height: 500px; width: 500px;">
+            <div style= "background-image: url('chart.png'); background-repeat: no-repeat; background-size: auto; width: 800px; height: 800px;">
+                <canvas id="radarchart" height="800" width="800" style="display: block; height: 800px; width: 800px;">
             </div>
         </h1>
         <script>
@@ -30,10 +37,10 @@
             var data = {
                 labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', ''],
                 datasets: [{
-                    label: "Marketing Needs",
+                    label: "Marketing Status",
                     backgroundColor: "rgba(179,181,198,0.2)",
-                    borderColor: "#3385FF",
-                    pointBackgroundColor: "#3385FF",
+                    borderColor: "#000",
+                    pointBackgroundColor: "rgba(100%, 0%, 0%, 1)",
                     pointBorderColor: "#fff",
                     pointHoverBackgroundColor: "#3385FF",
                     pointHoverBorderColor: "#3385FF",
@@ -89,18 +96,6 @@
         [...awarenessChoices].forEach(option => {
             option.addEventListener('change', updateChart);
         });
-
-        function results() {
-            if (document.getElementById("selection1").checked) {
-                awareness = document.getElementById("selection1").value;
-            }   else if (document.getElementById("selection2").checked) {
-                awareness = document.getElementById("selection2").value;
-            }   else {
-                awareness = document.getElementbyId("selection3").value;
-            }
-// testing 
-        document.write("Thanks for selecting " + awareness); 
-        };
         </script>
     </body>
 </html>
