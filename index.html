@@ -31,7 +31,7 @@
         <input id="s7-1" type="radio" name="question2" value="70" /><label for="s7-1">70</label>
         <input id="s8-1" type="radio" name="question2" value="80" /><label for="s8-1">80</label>
         <input id="s9-1" type="radio" name="question2" value="90" /><label for="s9-1">90</label>
-        <input id="s10-1" type="radio" name="question2" value="100" /><label for="s10-1">100</label>
+        <input id="s10-1" type="radio" name="question2" value="100" /><label for="s10-1">100</label></br>
         <H3>How connected do you feel your brand's imagery (visuals, digital, print, clothing, signage, etc) is to your
             ideal target market and your product/service?</H3>
         <input id="s1-2" type="radio" name="question3" value="10" /><label for="s1-2">10</label>
@@ -43,7 +43,19 @@
         <input id="s7-2" type="radio" name="question3" value="70" /><label for="s7-2">70</label>
         <input id="s8-2" type="radio" name="question3" value="80" /><label for="s8-2">80</label>
         <input id="s9-2" type="radio" name="question3" value="90" /><label for="s9-2">90</label>
-        <input id="s10-2" type="radio" name="question3" value="100" /><label for="s10-2">100</label>
+        <input id="s10-2" type="radio" name="question3" value="100" /><label for="s10-2">100</label></br>
+        <H3>In your current marketing, how often do you aim to educate, inform or inspire youy target market about your
+            area of expertise or niche knowledge?</H3>
+        <input id="s1-3" type="radio" name="question4" value="10" /><label for="s1-3">10</label>
+        <input id="s2-3" type="radio" name="question4" value="20" /><label for="s2-3">20</label>
+        <input id="s3-3" type="radio" name="question4" value="30" /><label for="s3-3">30</label>
+        <input id="s4-3" type="radio" name="question4" value="40" /><label for="s4-3">40</label>
+        <input id="s5-3" type="radio" name="question4" value="50" /><label for="s5-3">50</label>
+        <input id="s6-3" type="radio" name="question4" value="60" /><label for="s6-3">60</label>
+        <input id="s7-3" type="radio" name="question4" value="70" /><label for="s7-3">70</label>
+        <input id="s8-3" type="radio" name="question4" value="80" /><label for="s8-3">80</label>
+        <input id="s9-3" type="radio" name="question4" value="90" /><label for="s9-3">90</label>
+        <input id="s10-3" type="radio" name="question4" value="100" /><label for="s10-3">100</label></br>
     </form>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
@@ -66,11 +78,17 @@
         const question2Choices = document.querySelectorAll(`[name="question2"]`);
         let question2 = document.querySelector(`[name="question2"]:checked`) ? parseInt(document.querySelector(
             `[name="question2"]:checked`).value) : 0;
-        
+
         //----Question 3
         const question3Choices = document.querySelectorAll(`[name="question3"]`);
         let question3 = document.querySelector(`[name="question3"]:checked`) ? parseInt(document.querySelector(
-        `[name="question3"]:checked`).value) : 0;
+            `[name="question3"]:checked`).value) : 0;
+
+        //----Question 4
+
+        const question4Choices = document.querySelectorAll(`[name="question4"]`);
+        let question4 = document.querySelector(`[name="question4"]:checked`) ? parseInt(document.querySelector(
+            `[name="question4"]:checked`).value) : 0;
 
 
 
@@ -92,7 +110,7 @@
                     `${question1}`, // Initialize the value at the currently selected option on page load.
                     `${question2}`,
                     `${question3}`,
-                    90,
+                    `${question4}`,
                     60,
                     55,
                     50,
@@ -148,6 +166,11 @@
                     // addData(myRadarChart, this.name, dataPoint);
                     myRadarChart.update();
                     break;
+                case 'question4':
+                    myRadarChart.data.datasets[0].data[3] = dataPoint;
+                    // addData(myRadarChart, this.name, dataPoint);
+                    myRadarChart.update();
+                    break;
                 default:
                     break;
             }
@@ -160,8 +183,11 @@
             option.addEventListener('change', updateChart);
         });
         [...question3Choices].forEach(option => {
-        option.addEventListener('change', updateChart);
+            option.addEventListener('change', updateChart);
         });
+        [...question4Choices].forEach(option => {
+        option.addEventListener('change', updateChart);
+    });
     </script>
 </body>
 
