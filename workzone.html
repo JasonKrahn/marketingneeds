@@ -1,37 +1,36 @@
-<H3>Of those that are aware of your business, to what extent do you feel they understand the what and how of your business?</H3>
-<input id="s1" type="radio" name="question2" value="10"/><label for="s1">10</label>
-<input id="s2" type="radio" name="question2" value="20" /><label for="s2">20</label>
-<input id="s3" type="radio" name="question2" value="30" /><label for="s3">30</label>
-<input id="s4" type="radio" name="question2" value="40"/><label for="s4">40</label>
-<input id="s5" type="radio" name="question2" value="50" /><label for="s5">50</label>
-<input id="s6" type="radio" name="question2" value="60" /><label for="s6">60</label>
-<input id="s7" type="radio" name="question2" value="70"/><label for="s7">70</label>
-<input id="s8" type="radio" name="question2" value="80" /><label for="s8">80</label>
-<input id="s9" type="radio" name="question2" value="90" /><label for="s9">90</label>
-<input id="s10" type="radio" name="question2" value="100" /><label for="s10">100</label>
-
+<H3>In your current marketing, how often do you aim to educate, inform or inspire youy target market about your area of expertise or niche knowledge?</H3>
+<input id="s1-3" type="radio" name="question4" value="10" /><label for="s1-3">10</label>
+<input id="s2-3" type="radio" name="question4" value="20" /><label for="s2-3">20</label>
+<input id="s3-3" type="radio" name="question4" value="30" /><label for="s3-3">30</label>
+<input id="s4-3" type="radio" name="question4" value="40" /><label for="s4-3">40</label>
+<input id="s5-3" type="radio" name="question4" value="50" /><label for="s5-3">50</label>
+<input id="s6-3" type="radio" name="question4" value="60" /><label for="s6-3">60</label>
+<input id="s7-3" type="radio" name="question4" value="70" /><label for="s7-3">70</label>
+<input id="s8-3" type="radio" name="question4" value="80" /><label for="s8-3">80</label>
+<input id="s9-3" type="radio" name="question4" value="90" /><label for="s9-3">90</label>
+<input id="s10-3" type="radio" name="question4" value="100" /><label for="s10-3">100</label></br>
 
 <script>
 
-//-------------Question 1-----------------------
-// Select all of the radio options for "question2"
-const question2Choices = document.querySelectorAll(`[name="question2"]`);
-// Assign an initial value to the "question2" score. If a radio option is selected it will use this value otherwise it will be 0.
-let question2 = document.querySelector(`[name="question2"]:checked`) ? parseInt(document.querySelector(`[name="question2"]:checked`).value) : 0;
+//----Question 3
 
-case 'question2':
-myRadarChart.data.datasets[0].data[0] = dataPoint;
-// addData(myRadarChart, this.name, dataPoint);
-myRadarChart.update();
-break;
+const question4Choices = document.querySelectorAll(`[name="question4"]`);
+let question4 = document.querySelector(`[name="question4"]:checked`) ? parseInt(document.querySelector(
+        `[name="question4"]:checked`).value) : 0;
+
+//-------Case
+
+case 'question4':
+    myRadarChart.data.datasets[0].data[3] = dataPoint;
+    // addData(myRadarChart, this.name, dataPoint);
+    myRadarChart.update();
+    break;
 default:
-break;
+    break;
 
+//-----Update Chart
 
-[...question2Choices].forEach(option => {
-    option.addEventListener('change', updateChart);
+[...question4Choices].forEach(option => {
+option.addEventListener('change', updateChart);
 });
-
-
-
 </script>
