@@ -9,6 +9,7 @@
     <H2>Enter the Values</H2>
 
     <form>
+        <!-- Question 1-->
         <H3>How would you rate the current level of of your brand/business with your target market?</H3>
         <input id="s1-0" type="radio" name="question1" value="10" /><label for="s1-0">10</label>
         <input id="s3-0" type="radio" name="question1" value="30" /><label for="s3-0">30</label>
@@ -20,6 +21,7 @@
         <input id="s8-0" type="radio" name="question1" value="80" /><label for="s8-0">80</label>
         <input id="s9-0" type="radio" name="question1" value="90" /><label for="s9-0">90</label>
         <input id="s10-0" type="radio" name="question1" value="100" /><label for="s10-0">100</label></br>
+        <!-- Question 2-->
         <H3>Of those that are aware of your business, to what extent do you feel they understand the what and how of
             your business?</H3>
         <input id="s1-1" type="radio" name="question2" value="10" /><label for="s1-1">10</label>
@@ -32,6 +34,7 @@
         <input id="s8-1" type="radio" name="question2" value="80" /><label for="s8-1">80</label>
         <input id="s9-1" type="radio" name="question2" value="90" /><label for="s9-1">90</label>
         <input id="s10-1" type="radio" name="question2" value="100" /><label for="s10-1">100</label></br>
+        <!-- Question 3-->
         <H3>How connected do you feel your brand's imagery (visuals, digital, print, clothing, signage, etc) is to your
             ideal target market and your product/service?</H3>
         <input id="s1-2" type="radio" name="question3" value="10" /><label for="s1-2">10</label>
@@ -44,6 +47,7 @@
         <input id="s8-2" type="radio" name="question3" value="80" /><label for="s8-2">80</label>
         <input id="s9-2" type="radio" name="question3" value="90" /><label for="s9-2">90</label>
         <input id="s10-2" type="radio" name="question3" value="100" /><label for="s10-2">100</label></br>
+        <!-- Question 4-->
         <H3>In your current marketing, how often do you aim to educate, inform or inspire youy target market about your
             area of expertise or niche knowledge?</H3>
         <input id="s1-3" type="radio" name="question4" value="10" /><label for="s1-3">10</label>
@@ -56,6 +60,20 @@
         <input id="s8-3" type="radio" name="question4" value="80" /><label for="s8-3">80</label>
         <input id="s9-3" type="radio" name="question4" value="90" /><label for="s9-3">90</label>
         <input id="s10-3" type="radio" name="question4" value="100" /><label for="s10-3">100</label></br>
+        <!-- Question 5-->
+        <H3>Considering someone who is not a current or past customer. How would you rate
+            their likely level of perceived trust in your brand/business to deliver what you promise?</H3>
+        <input id="s1-5" type="radio" name="question5" value="10" /><label for="s1-5">10</label>
+        <input id="s2-5" type="radio" name="question5" value="20" /><label for="s2-5">20</label>
+        <input id="s3-5" type="radio" name="question5" value="30" /><label for="s3-5">30</label>
+        <input id="s4-5" type="radio" name="question5" value="40" /><label for="s4-5">40</label>
+        <input id="s5-5" type="radio" name="question5" value="50" /><label for="s5-5">50</label>
+        <input id="s6-5" type="radio" name="question5" value="60" /><label for="s6-5">60</label>
+        <input id="s7-5" type="radio" name="question5" value="70" /><label for="s7-5">70</label>
+        <input id="s8-5" type="radio" name="question5" value="80" /><label for="s8-5">80</label>
+        <input id="s9-5" type="radio" name="question5" value="90" /><label for="s9-5">90</label>
+        <input id="s10-5" type="radio" name="question5" value="100" /><label for="s10-5">100</label></br>
+
     </form>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
@@ -85,11 +103,15 @@
             `[name="question3"]:checked`).value) : 0;
 
         //----Question 4
-
         const question4Choices = document.querySelectorAll(`[name="question4"]`);
         let question4 = document.querySelector(`[name="question4"]:checked`) ? parseInt(document.querySelector(
             `[name="question4"]:checked`).value) : 0;
+        
+        //----Question 3
 
+        const question5Choices = document.querySelectorAll(`[name="question5"]`);
+        let question5 = document.querySelector(`[name="question5"]:checked`) ? parseInt(document.querySelector(
+            `[name="question5"]:checked`).value) : 0;
 
 
         var ctx = document.getElementById("radarchart");
@@ -158,19 +180,21 @@
                     break;
                 case 'question2':
                     myRadarChart.data.datasets[0].data[1] = dataPoint;
-                    // addData(myRadarChart, this.name, dataPoint);
                     myRadarChart.update();
                     break;
                 case 'question3':
                     myRadarChart.data.datasets[0].data[2] = dataPoint;
-                    // addData(myRadarChart, this.name, dataPoint);
                     myRadarChart.update();
                     break;
                 case 'question4':
                     myRadarChart.data.datasets[0].data[3] = dataPoint;
-                    // addData(myRadarChart, this.name, dataPoint);
                     myRadarChart.update();
                     break;
+                case 'question5':
+                    myRadarChart.data.datasets[0].data[4] = dataPoint;
+
+    myRadarChart.update();
+    break;
                 default:
                     break;
             }
@@ -186,6 +210,9 @@
             option.addEventListener('change', updateChart);
         });
         [...question4Choices].forEach(option => {
+        option.addEventListener('change', updateChart);
+        });
+        [...question5Choices].forEach(option => {
         option.addEventListener('change', updateChart);
         });
     </script>
