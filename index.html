@@ -1,21 +1,99 @@
 <html lang="en">
 
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html >
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Marketing Needs Analysis</title>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css">
+        <style type="text/css">
+            h1 {
+                background-color: darkorange;
+                font-size: 40px;
+                color: black;
+                font-style: normal;
+                font-weight: bold;
+                text-decoration: none;
+                padding: 25px;
+
+            }
+
+            form {
+
+                font-size: medium;
+                margin: 8px;
+                line-height: 25px;
+                display: block;
+
+            }
+
+            label,
+            input {
+                line-height: 45px;
+                padding-left: 9px;
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: lighter;
+                line-height: auto;
+                margin: 8px;
+                border: 8px;
+            }
+
+            body {
+                font-family: DINOT-Medium, serif;
+                margin: 25px;
+                border: 25px;
+                padding-right: 4rem;
+                padding-left: 4rem;
+            }
+
+            canvas {
+                background-image: url('');
+                background-repeat: no-repeat;
+                background-position: center; 
+                background-size: contain;
+
+            }
+
+            /* 
+            Canvas {
+                height: 800px;
+                width: 800px;
+                display: block;
+            } 
+        */
+
+            hr {
+                margin: 45px;
+            }
+        </style>
+    </head>
 
 <body>
+
     <H1>Marketing Needs Analysis Map</H1>
     <p>Answer each of the questions below as best you can. Go with your gut feel, but be honest and thoughtful
-        about your answer. After you’ve finished each question, the graphbelow will plot your results within the Marketing
-        Needs Analysis Map.
-        <p>For each question: 10 = high/very positive/very high, 0 = zero/very negative/very low</p>
+        about your answer. After you’ve finished each question, the graphbelow will plot your results within the
+        Marketing
+        Needs Analysis Map.</p>
+    <p>For each question: <b>10</b> = high/very positive/very high, <b>0</b> = zero/very negative/very low</p>
+
+    <br>
 
     <form>
 
         <!-- Question 1-->
-        <H3>1. How would you rate the current level of of your brand/business with your target market?</H3>
+
+        <H3><b>Q1</b> - How would you rate the current level of of your brand/business with your target market?</H3>
+
         <input id="s1-0" type="radio" name="question1" value="10" /><label for="s1-0">10</label>
         <input id="s3-0" type="radio" name="question1" value="30" /><label for="s3-0">30</label>
         <input id="s2-0" type="radio" name="question1" value="20" /><label for="s2-0">20</label>
@@ -25,8 +103,8 @@
         <input id="s7-0" type="radio" name="question1" value="70" /><label for="s7-0">70</label>
         <input id="s8-0" type="radio" name="question1" value="80" /><label for="s8-0">80</label>
         <input id="s9-0" type="radio" name="question1" value="90" /><label for="s9-0">90</label>
-        <input id="s10-0" type="radio" name="question1" value="100" /><label for="s10-0">100</label></br>
-
+        <input id="s10-0" type="radio" name="question1" value="100" /><label for="s10-0">100</label>
+        <hr>
         <!-- Question 2-->
         <H3>Of those that are aware of your business, to what extent do you feel they understand the what and how of
             your business?</H3>
@@ -40,7 +118,7 @@
         <input id="s8-1" type="radio" name="question2" value="80" /><label for="s8-1">80</label>
         <input id="s9-1" type="radio" name="question2" value="90" /><label for="s9-1">90</label>
         <input id="s10-1" type="radio" name="question2" value="100" /><label for="s10-1">100</label></br>
-
+        <hr>
         <!-- Question 3-->
         <H3>How connected do you feel your brand's imagery (visuals, digital, print, clothing, signage, etc) is to your
             ideal target market and your product/service?</H3>
@@ -54,7 +132,7 @@
         <input id="s8-2" type="radio" name="question3" value="80" /><label for="s8-2">80</label>
         <input id="s9-2" type="radio" name="question3" value="90" /><label for="s9-2">90</label>
         <input id="s10-2" type="radio" name="question3" value="100" /><label for="s10-2">100</label></br>
-
+        <hr>
         <!-- Question 4-->
         <H3>In your current marketing, how often do you aim to educate, inform or inspire youy target market about your
             area of expertise or niche knowledge?</H3>
@@ -68,7 +146,7 @@
         <input id="s8-3" type="radio" name="question4" value="80" /><label for="s8-3">80</label>
         <input id="s9-3" type="radio" name="question4" value="90" /><label for="s9-3">90</label>
         <input id="s10-3" type="radio" name="question4" value="100" /><label for="s10-3">100</label></br>
-
+        <hr>
         <!-- Question 5-->
         <H3>Considering someone who is not a current or past customer. How would you rate
             their likely level of perceived trust in your brand/business to deliver what you promise?</H3>
@@ -82,7 +160,7 @@
         <input id="s8-5" type="radio" name="question5" value="80" /><label for="s8-5">80</label>
         <input id="s9-5" type="radio" name="question5" value="90" /><label for="s9-5">90</label>
         <input id="s10-5" type="radio" name="question5" value="100" /><label for="s10-5">100</label></br>
-
+        <hr>
         <!-- Question 6-->
         <H3>How likeable is your brand/business to your ideal customer?</H3>
         <input id="s1-6" type="radio" name="question6" value="10" /><label for="s1-6">10</label>
@@ -95,7 +173,7 @@
         <input id="s8-6" type="radio" name="question6" value="80" /><label for="s8-6">80</label>
         <input id="s9-6" type="radio" name="question6" value="90" /><label for="s9-6">90</label>
         <input id="s10-6" type="radio" name="question6" value="100" /><label for="s10-6">100</label></br>
-
+        <hr>
         <!-- Question 7-->
         <H3>Considering your current customers and others who interact with your brand
             online and off. How likely are they to take action from your current marketing by sharing
@@ -110,7 +188,7 @@
         <input id="s8-7" type="radio" name="question7" value="80" /><label for="s8-7">80</label>
         <input id="s9-7" type="radio" name="question7" value="90" /><label for="s9-7">90</label>
         <input id="s10-7" type="radio" name="question7" value="100" /><label for="s10-7">100</label></br>
-
+        <hr>
         <!-- Question 8-->
         <H3>How would you rate your target markets level of perceived need or desire for your
             product/service?</H3>
@@ -124,7 +202,7 @@
         <input id="s8-8" type="radio" name="question8" value="80" /><label for="s8-8">80</label>
         <input id="s9-8" type="radio" name="question8" value="90" /><label for="s9-8">90</label>
         <input id="s10-8" type="radio" name="question8" value="100" /><label for="s10-8">100</label></br>
-
+        <hr>
         <!-- Question 9-->
         <H3>How effective is your sales process to take interested enquires through to customer
             or client?</H3>
@@ -139,7 +217,7 @@
         <input id="s8-9" type="radio" name="question9" value="80" /><label for="s8-9">80</label>
         <input id="s9-9" type="radio" name="question9" value="90" /><label for="s9-9">90</label>
         <input id="s10-9" type="radio" name="question9" value="100" /><label for="s10-9">100</label></br>
-
+        <hr>
         <!-- Question 10-->
         <H3>Rate your level of direct communication with current and past clients (how often do
             you maintain contact with them).</H3>
@@ -153,7 +231,7 @@
         <input id="s8-10" type="radio" name="question10" value="80" /><label for="s8-10">80</label>
         <input id="s9-10" type="radio" name="question10" value="90" /><label for="s9-10">90</label>
         <input id="s10-10" type="radio" name="question10" value="100" /><label for="s10-10">100</label></br>
-
+        <hr>
         <!-- Question 11-->
         <H3>How likely is it that your past clients purchase from you again, or become
             recurring clients?</H3>
@@ -167,7 +245,7 @@
         <input id="s8-11" type="radio" name="question11" value="80" /><label for="s8-11">80</label>
         <input id="s9-11" type="radio" name="question11" value="90" /><label for="s9-11">90</label>
         <input id="s10-11" type="radio" name="question11" value="100" /><label for="s10-11">100</label></br>
-
+        <hr>
         <!-- Question 12-->
         <H3>How likely are you to retain a client, even if a direct competitor lowers their prices
             to be slightly less than yours?</H3>
@@ -181,7 +259,7 @@
         <input id="s8-12" type="radio" name="question12" value="80" /><label for="s8-12">80</label>
         <input id="s9-12" type="radio" name="question12" value="90" /><label for="s9-12">90</label>
         <input id="s10-12" type="radio" name="question12" value="100" /><label for="s10-12">100</label></br>
-
+        <hr>
 
         <!-- Question 13-->
         <H3>Considering your current and recent past customers. How likely would they be to
@@ -196,7 +274,7 @@
         <input id="s8-13" type="radio" name="question13" value="80" /><label for="s8-13">80</label>
         <input id="s9-13" type="radio" name="question13" value="90" /><label for="s9-13">90</label>
         <input id="s10-13" type="radio" name="question13" value="100" /><label for="s10-13">100</label></br>
-
+        <hr>
         <!-- Question 14-->
         <H3>If you were to publish a video, image or post on your business social media page
             that promoted a 'special price' or 'offer' for your services, how would you rate the
@@ -211,7 +289,7 @@
         <input id="s8-14" type="radio" name="question14" value="80" /><label for="s8-14">80</label>
         <input id="s9-14" type="radio" name="question14" value="90" /><label for="s9-14">90</label>
         <input id="s10-14" type="radio" name="question14" value="100" /><label for="s10-14">100</label></br>
-
+        <hr>
         <!-- Question 15-->
         <H3>If you were to contact a past client directly via phone or email to seek their opinion
             on a new product or service, or to refer someone to your business. How keen would they
@@ -226,16 +304,25 @@
         <input id="s8-15" type="radio" name="question15" value="80" /><label for="s8-15">80</label>
         <input id="s9-15" type="radio" name="question15" value="90" /><label for="s9-15">90</label>
         <input id="s10-15" type="radio" name="question15" value="100" /><label for="s10-15">100</label></br>
-
+        <hr>
     </form>
+    <h1>Marketing Coverage Chart</h1>
+    <p>Your results have dynamically plotted within the radar chart below.</p>
+    <p>The connected dots graphically expose gaps or coverage
+        that should help identify any key areas that require focus on for improving your video
+        marketing strategy.</p></br></br>
+
+    <p>See <a href="#example">some examples</a> below for a couple chart examples that outline ways to read
+        your results</p>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
-    <h1>
-        <div
-            style="background-image: url(''); background-repeat: no-repeat; background-size: auto; width: 800px; height: 800px;">
-            <canvas id="radarchart" height="800" width="800" style="display: block; height: 800px; width: 800px;">
+
+  <div style= "width: 800px; height: 800px;">
+        <canvas id="radarchart">
         </div>
-    </h1>
+
+    <img src="examples.jpg" id="example">
+
 
     <script>
         //----Question 1
@@ -323,17 +410,17 @@
         var ctx = document.getElementById("radarchart");
         var data = {
             labels: ['Exposure', 'Understanding', 'Connection', 'Value', 'Trust', 'Likability', 'Motivation',
-                'Desire', 'Effectiveness', 'Communication', 'Repeat Purchase', 'Retension', 'Referrers',
+                'Desire', 'Effectiveness', 'Communication', 'Repeat Purchase', 'Retention', 'Referrers',
                 'Sales Engagement', 'Utility'
             ],
             datasets: [{
                 label: "Marketing Coverage",
-                backgroundColor: "rgba(255,1,255, .2)",
-                borderColor: "#000",
+                backgroundColor: "rgba(252,175,22,.4)",
+                borderColor: "RGBa(150,10,10,.5)",
                 pointBackgroundColor: "#fcaf16",
                 pointBorderColor: "#fff",
-                pointHoverBackgroundColor: "rgba(255,1,255, .9)",
-                pointHoverBorderColor: "#000)",
+                pointHoverBackgroundColor: "rgba(252,175,22,1)",
+                pointHoverBorderColor: "rgba(252,175,22,1)",
                 data: [
                     `${question1}`, // Initialize the value at the currently selected option on page load.
                     `${question2}`,
