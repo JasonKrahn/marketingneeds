@@ -12,8 +12,7 @@
     <style type="text/css">
         h1 {
             background-color: darkorange;
-            font: size 5;
-            vw;
+            font: size 5vw;
             color: black;
             font-style: normal;
             font-weight: bold;
@@ -25,12 +24,11 @@
         h3 {
             font: size 5vw;
             color: darkorange;
-
-            h4 {
-                font-size: 4vw;
-                color: black;
-            }
         }
+
+      /*  h4 {
+                
+            } */
 
 
         form {
@@ -60,10 +58,13 @@
             font-family: DINOT-Medium, serif;
             border: 5px;
             padding-left: 1.5rem;
+            min-width:800px;        /* Suppose you want minimum width of 1000px */
+            width: auto !important;  /* Firefox will set width as auto */
+            width:800px; 
         }
 
         canvas {
-            background-image: url(' ');
+            background-image: url('chart3.jpg');
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
@@ -428,20 +429,21 @@
 
         var ctx = document.getElementById("radarchart");
         var data = {
-            labels: ['Exposure', 'Understanding', 'Connection', 'Value', 'Trust', 'Likability', 'Motivation',
-                'Desire', 'Effectiveness', 'Communication', 'Repeat Purchase', 'Retention', 'Referrers',
-                'Sales Engagement', 'Utility'
+            labels: ['', '', '', '', '', '', '',
+                '', '', '', '', '', '',
+                '', ''
             ],
             datasets: [{
                 label: "Marketing Coverage",
-                backgroundColor: "rgba(252,175,22,.4)",
-                borderColor: "RGBa(150,10,10,.2)",
+                backgroundColor: "RGBa(254,140,2,.8)",
+                borderColor: "RGBa(254,140,2,.8)", 
                 borderWidth: "2",
                 lineTension: ".02",
-                pointBackgroundColor: "#fcaf16",
-                pointBorderColor: "#fff",
-                pointHoverBackgroundColor: "rgba(252,175,22,1)",
-                pointHoverBorderColor: "rgba(252,175,22,1)",
+                pointBackgroundColor: "RGBa(254,140,2,.8)",
+                pointBorderColor: "RGBa(1,1,2,.5)",
+                pointHoverBackgroundColor: "RGBa(254,140,2,.8)",
+                pointHoverBorderColor: "RGBa(254,140,2,.8)",
+                hoverBorderColor: "RGBa(254,140,2,.8)",
                 data: [
                     `${question1}`, // Initialize the value at the currently selected option on page load.
                     `${question2}`,
@@ -467,6 +469,8 @@
             options: {
                 scale: {
                     responsive: true,
+                    lineWidth: 50,
+                    display: false,
                     ticks: {
                         min: 0,
                         max: 100
@@ -476,7 +480,7 @@
                         fontSize: 15
                     },
                 },
-                scaleFontSize: 0,
+                scaleFontSize: 2,
                 legend: {
                     display: true
                 },
