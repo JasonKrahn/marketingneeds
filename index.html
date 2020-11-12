@@ -64,7 +64,7 @@
         }
 
         canvas {
-            background-image: url('chart3.jpg');
+            background-image: url('radar-chart.svg');
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
@@ -429,21 +429,21 @@
 
         var ctx = document.getElementById("radarchart");
         var data = {
-            labels: ['', '', '', '', '', '', '',
+            labels: ['Exposure', '', '', '', '', '', '',
                 '', '', '', '', '', '',
-                '', ''
+                '', 'Q15'
             ],
             datasets: [{
                 label: "Marketing Coverage",
-                backgroundColor: "RGBa(254,140,2,.8)",
-                borderColor: "RGBa(254,140,2,.8)", 
-                borderWidth: "2",
-                lineTension: ".02",
-                pointBackgroundColor: "RGBa(254,140,2,.8)",
-                pointBorderColor: "RGBa(1,1,2,.5)",
-                pointHoverBackgroundColor: "RGBa(254,140,2,.8)",
-                pointHoverBorderColor: "RGBa(254,140,2,.8)",
-                hoverBorderColor: "RGBa(254,140,2,.8)",
+                backgroundColor: "RGBa(1,1,1,.5)", //fill for chart graph
+                borderColor: "RGBa(254,140,2,.9)",  //line colour for points spans
+                borderWidth: "3",
+                lineTension: "0",
+                pointBackgroundColor: "RGBa(254,140,2)",
+                pointBorderColor: "",
+                pointHoverBackgroundColor: "RGBa(254,140,2)",
+                pointHoverBorderColor: "RGBa(254,140,2)",
+                hoverBorderColor: "RGB(254,140,2)",
                 data: [
                     `${question1}`, // Initialize the value at the currently selected option on page load.
                     `${question2}`,
@@ -480,9 +480,9 @@
                         fontSize: 15
                     },
                 },
-                scaleFontSize: 2,
+                scaleFontSize: 20,
                 legend: {
-                    display: true
+                    display: true,
                 },
             }
         });
