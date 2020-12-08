@@ -59,20 +59,12 @@
 
         body {
             font-family: DINOT-Medium, serif;
-            border: 5px;
-            padding-left: 1.5rem;
-            min-width: 800px;
-            /* Suppose you want minimum width of 1000px */
-            width: auto !important;
-            /* Firefox will set width as auto */
-            width: 800px;
+            margin: 0;
+            padding: 0 1em;
         }
 
         canvas {
-            background-image: url('coverage-chart.svg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: contain;
+            
 
             width: 100%;
 
@@ -95,6 +87,54 @@
 
         hr {
             margin: 2rem;
+        }
+        .canvas-container {
+            width: 100%;
+            height: 0;
+            margin: 5px;
+            position: relative;
+            padding-top: calc(100vw - 2em);
+        }
+        @media screen and (min-width: 550px) {
+            .canvas-container {
+                padding-top: 550px;
+            }
+        }
+        #radarchart {
+            max-width: 100vw;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            max-width: 550px;
+            background-image: url('coverage-chart.svg');
+            background-repeat: no-repeat;
+            background-position: center; 
+            background-size: 88%;
+            padding-bottom: 14px; /* not ideal using a hard value but it does the job of keeping the background image and the data centered*/
+            -webkit-print-color-adjust: exact; /* Suggests to the browser to print background image */
+            print-color-adjust: exact;
+        }
+        @media screen and (min-width: 400px) {
+            #radarchart {
+                background-size: 91%;
+            }
+        }
+        @media screen and (min-width: 490px) {
+            #radarchart {
+                padding-bottom: 12px;
+                background-size: 93%;
+            }
+        }
+        @media screen and (min-width: 550px) {
+            #radarchart {
+                padding-bottom: 11px;
+                background-size: 95%;
+            }
+        }
+        .example-image {
+            width: auto;
+            max-width: 100%;
         }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
@@ -339,7 +379,7 @@
         marketing strategy.</p>
     <p>See <a href="#example">some examples</a> below for a couple chart examples that outline ways to read
         your results</p><br>
-    <div style="width: 800px; height: 800px; margin: 5px;">
+    <div class="canvas-container" style="">
         <canvas id="radarchart">
     </div>
     <hr></br>
@@ -347,7 +387,7 @@
         <h2 id="example">EXAMPLE 1</h2>
         <p>Local business, niche industry</p></br>
 
-        <img src="example-1.png" alt="Example Chart 1" style="width:100%;"><br></br>
+        <img class="example-image" src="example-1.png" alt="Example Chart 1">
 
         <p>In this example result we can identify some common marketing gaps which regularly feature in gap
             analysis for a small or local business.</p>
@@ -369,7 +409,7 @@
         <h2>EXAMPLE 2</h2>
         <p>Established bricks & mortar, newly added eCommerce</p></br>
 
-        <img src="example-1.png" alt="Example Chart 2" style="width:100%;"><br></br>
+        <img class="example-image" src="example-1.png" alt="Example Chart 2" >
 
         <p>In this example result we can identify that this brand ranks highly
             in brand awareness and engagement indicating that there is a good
