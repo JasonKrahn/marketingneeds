@@ -2,12 +2,10 @@
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css">
-	    <style type="text/css">
+    <!-- these styles below are added on top of the website styling already within wordpress -->
+    <style type="text/css">
         canvas {
-            background-image: url('https://www.tripwiremedia.com/wp-content/uploads/2020/12/radar-chart.svg');
+            background-image: url('https://www.tripwiremedia.com/wp-content/uploads/2020/12/coverage-chart-2.svg');
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
@@ -17,39 +15,46 @@
         hr {
             margin: 1rem;
         }
-				form {
+
+        form {
             font-size: medium;
             margin: 4px;
             line-height: 2rem;
             display: block;
         }
+
         .questionHeader {
             font: size 5vw;
             color: #fcaf17;
             font-weight: bold;
-}
-        .question {
-            font-family: open sans,sans-serif;
         }
+
+        .question {
+            font-family: open sans, sans-serif;
+        }
+
         label,
         input {
-            padding-right: 1.5rem;
-            padding-left: .5rem;
-            line-height: 2.5rem;
+            padding-right: 1.3rem;
+            padding-left: .2rem;
+            line-height: 2.3rem;
         }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
 </head>
 
 <body>
-
-    <p>Answer each of the questions below as best you can. Go with your gut feel, but be honest and thoughtful about your answers. After you’ve finished each question, the graph below will plot your results within your very own Marketing Needs Analysis Map.</p>
+    <h3 class="questionHeader">How to use this tool</h3></br>
+    <p>Answer each of the questions below as best you can. Go with your gut feel, but be honest and thoughtful about
+        your answers. After you’ve finished each question, the graph below will plot your results within your very own
+        Marketing Needs Analysis Map.</p>
     <p>For each question: <b>10</b> = high/very positive/very high, <b>0</b> = zero/very negative/very low</p>
-</br>
+    </br>
     <form>
-		<h3 class="questionHeader">Awareness</h3><br></br>
+        <h3 class="questionHeader">Awareness</h3></br>
         <!-- Question 1-->
-        <H5 class="question"><b>Q1</b> - How would you rate the current level of awareness of your brand/business with your target market?</H5>
+        <H5 class="question"><b>Q1</b> - How would you rate the current level of awareness of your brand/business with
+            your target market?</H5>
 
         <input id="s1-0" type="radio" name="question1" value="10" /><label for="s1-0">10</label>
         <input id="s2-0" type="radio" name="question1" value="20" /><label for="s2-0">20</label>
@@ -63,7 +68,8 @@
         <input id="s10-0" type="radio" name="question1" value="100" /><label for="s10-0">100</label>
         <hr>
         <!-- Question 2-->
-        <H5 class="question"><b>Q2</b> - Of those that are aware of your business, to what extent do you feel they understand the "what" and "how" of your business?</H5>
+        <H5 class="question"><b>Q2</b> - Of those that are aware of your business, to what extent do you feel they
+            understand the "what" and "how" of your business?</H5>
         <input id="s1-1" type="radio" name="question2" value="10" /><label for="s1-1">10</label>
         <input id="s2-1" type="radio" name="question2" value="20" /><label for="s2-1">20</label>
         <input id="s3-1" type="radio" name="question2" value="30" /><label for="s3-1">30</label>
@@ -76,7 +82,8 @@
         <input id="s10-1" type="radio" name="question2" value="100" /><label for="s10-1">100</label></br>
         <hr>
         <!-- Question 3-->
-        <H5 class="question"><b>Q3</b> - How connected do you feel your brand's imagery (visuals, digital, print, clothing, signage, etc) is to your ideal target market and your product/service?</H5>
+        <H5 class="question"><b>Q3</b> - How connected do you feel your brand's imagery (visuals, digital, print,
+            clothing, signage, etc) is to your ideal target market and your product/service?</H5>
         <input id="s1-2" type="radio" name="question3" value="10" /><label for="s1-2">10</label>
         <input id="s2-2" type="radio" name="question3" value="20" /><label for="s2-2">20</label>
         <input id="s3-2" type="radio" name="question3" value="30" /><label for="s3-2">30</label>
@@ -91,7 +98,8 @@
         </br>
         <h3 class="questionHeader">Engagement</h3></br>
         <!-- Question 4-->
-        <H5 class="question"><b>Q4</b> - In your current marketing, how often do you aim to educate, inform or inspire your target market about your area of expertise or niche knowledge?</H5>
+        <H5 class="question"><b>Q4</b> - In your current marketing, how often do you aim to educate, inform or inspire
+            your target market about your area of expertise or niche knowledge?</H5>
         <input id="s1-3" type="radio" name="question4" value="10" /><label for="s1-3">10</label>
         <input id="s2-3" type="radio" name="question4" value="20" /><label for="s2-3">20</label>
         <input id="s3-3" type="radio" name="question4" value="30" /><label for="s3-3">30</label>
@@ -104,7 +112,8 @@
         <input id="s10-3" type="radio" name="question4" value="100" /><label for="s10-3">100</label></br>
         <hr>
         <!-- Question 5-->
-        <H5 class="question"><b>Q5</b> - Considering someone who is not a current or past customer. How would you rate their likely level of perceived trust in your brand/business to deliver what you promise?</H5>
+        <H5 class="question"><b>Q5</b> - Considering someone who is not a current or past customer. How would you rate
+            their likely level of perceived trust in your brand/business to deliver what you promise?</H5>
         <input id="s1-5" type="radio" name="question5" value="10" /><label for="s1-5">10</label>
         <input id="s2-5" type="radio" name="question5" value="20" /><label for="s2-5">20</label>
         <input id="s3-5" type="radio" name="question5" value="30" /><label for="s3-5">30</label>
@@ -132,7 +141,9 @@
         </br>
         <h3 class="questionHeader">Conversion</h3></br>
         <!-- Question 7-->
-        <H5 class="question"><b>Q7</b> - Considering your current customers and others who interact with your brand online and off. How likely are they to take action from your current marketing by sharing it with others, responding to any call to action, or directly purchasing?</H5>
+        <H5 class="question"><b>Q7</b> - Considering your current customers and others who interact with your brand
+            online and off. How likely are they to take action from your current marketing by sharing it with others,
+            responding to any call to action, or directly purchasing?</H5>
         <input id="s1-7" type="radio" name="question7" value="10" /><label for="s1-7">10</label>
         <input id="s2-7" type="radio" name="question7" value="20" /><label for="s2-7">20</label>
         <input id="s3-7" type="radio" name="question7" value="30" /><label for="s3-7">30</label>
@@ -145,7 +156,8 @@
         <input id="s10-7" type="radio" name="question7" value="100" /><label for="s10-7">100</label></br>
         <hr>
         <!-- Question 8-->
-        <H5 class="question"><b>Q8</b> - How would you rate your target markets level of perceived need or desire for your product/service?</H5>
+        <H5 class="question"><b>Q8</b> - How would you rate your target markets level of perceived need or desire for
+            your product/service?</H5>
         <input id="s1-8" type="radio" name="question8" value="10" /><label for="s1-8">10</label>
         <input id="s2-8" type="radio" name="question8" value="20" /><label for="s2-8">20</label>
         <input id="s3-8" type="radio" name="question8" value="30" /><label for="s3-8">30</label>
@@ -158,7 +170,8 @@
         <input id="s10-8" type="radio" name="question8" value="100" /><label for="s10-8">100</label></br>
         <hr>
         <!-- Question 9-->
-        <H5 class="question"><b>Q9</b> - How effective is your sales process to take interested enquires through to customer or client?</H5>
+        <H5 class="question"><b>Q9</b> - How effective is your sales process to take interested enquires through to
+            customer or client?</H5>
 
         <input id="s1-9" type="radio" name="question9" value="10" /><label for="s1-9">10</label>
         <input id="s2-9" type="radio" name="question9" value="20" /><label for="s2-9">20</label>
@@ -174,7 +187,8 @@
         </br>
         <h3 class="questionHeader">Loyalty</h3></br>
         <!-- Question 10-->
-        <H5 class="question"><b>Q10</b> - Rate your level of direct communication with current and past clients (how often do you maintain contact with them).</H5>
+        <H5 class="question"><b>Q10</b> - Rate your level of direct communication with current and past clients (how
+            often do you maintain contact with them).</H5>
         <input id="s1-10" type="radio" name="question10" value="10" /><label for="s1-10">10</label>
         <input id="s2-10" type="radio" name="question10" value="20" /><label for="s2-10">20</label>
         <input id="s3-10" type="radio" name="question10" value="30" /><label for="s3-10">30</label>
@@ -187,7 +201,8 @@
         <input id="s10-10" type="radio" name="question10" value="100" /><label for="s10-10">100</label></br>
         <hr>
         <!-- Question 11-->
-        <H5 class="question"><b>Q11</b> - How likely is it that your past clients purchase from you again, or become recurring clients?</H5>
+        <H5 class="question"><b>Q11</b> - How likely is it that your past clients purchase from you again, or become
+            recurring clients?</H5>
         <input id="s1-11" type="radio" name="question11" value="10" /><label for="s1-11">10</label>
         <input id="s2-11" type="radio" name="question11" value="20" /><label for="s2-11">20</label>
         <input id="s3-11" type="radio" name="question11" value="30" /><label for="s3-11">30</label>
@@ -200,7 +215,8 @@
         <input id="s10-11" type="radio" name="question11" value="100" /><label for="s10-11">100</label></br>
         <hr>
         <!-- Question 12-->
-        <H5 class="question"><b>Q12</b> - How likely are you to retain a client, even if a direct competitor lowers their prices to be slightly less than yours?</H5>
+        <H5 class="question"><b>Q12</b> - How likely are you to retain a client, even if a direct competitor lowers
+            their prices to be slightly less than yours?</H5>
         <input id="s1-12" type="radio" name="question12" value="10" /><label for="s1-12">10</label>
         <input id="s2-12" type="radio" name="question12" value="20" /><label for="s2-12">20</label>
         <input id="s3-12" type="radio" name="question12" value="30" /><label for="s3-12">30</label>
@@ -215,7 +231,8 @@
         </br>
         <h3 class="questionHeader">Advocacy</h3></br>
         <!-- Question 13-->
-        <H5 class="question"><b>Q13</b> - Considering your current and recent past customers. How likely would they be to refer you to others?</H5>
+        <H5 class="question"><b>Q13</b> - Considering your current and recent past customers. How likely would they be
+            to refer you to others?</H5>
         <input id="s1-13" type="radio" name="question13" value="10" /><label for="s1-13">10</label>
         <input id="s2-13" type="radio" name="question13" value="20" /><label for="s2-13">20</label>
         <input id="s3-13" type="radio" name="question13" value="30" /><label for="s3-13">30</label>
@@ -228,7 +245,9 @@
         <input id="s10-13" type="radio" name="question13" value="100" /><label for="s10-13">100</label></br>
         <hr>
         <!-- Question 14-->
-        <H5 class="question"><b>Q14</b> - If you were to publish a video, image or post on your business social media page that promoted a 'special price' or 'offer' for your services, how would you rate the likelihood for this content to be shared, commented on or 'liked'?</H5>
+        <H5 class="question"><b>Q14</b> - If you were to publish a video, image or post on your business social media
+            page that promoted a 'special price' or 'offer' for your services, how would you rate the likelihood for
+            this content to be shared, commented on or 'liked'?</H5>
         <input id="s1-14" type="radio" name="question14" value="10" /><label for="s1-14">10</label>
         <input id="s2-14" type="radio" name="question14" value="20" /><label for="s2-14">20</label>
         <input id="s3-14" type="radio" name="question14" value="30" /><label for="s3-14">30</label>
@@ -241,7 +260,9 @@
         <input id="s10-14" type="radio" name="question14" value="100" /><label for="s10-14">100</label></br>
         <hr>
         <!-- Question 15-->
-        <H5 class="question"><b>Q15</b> - If you were to contact a past client directly via phone or email to seek their opinion on a new product or service, or to refer someone to your business. How keen would they be to help?</H5>
+        <H5 class="question"><b>Q15</b> - If you were to contact a past client directly via phone or email to seek their
+            opinion on a new product or service, or to refer someone to your business. How keen would they be to help?
+        </H5>
         <input id="s1-15" type="radio" name="question15" value="10" /><label for="s1-15">10</label>
         <input id="s2-15" type="radio" name="question15" value="20" /><label for="s2-15">20</label>
         <input id="s3-15" type="radio" name="question15" value="30" /><label for="s3-15">30</label>
@@ -253,7 +274,7 @@
         <input id="s9-15" type="radio" name="question15" value="90" /><label for="s9-15">90</label>
         <input id="s10-15" type="radio" name="question15" value="100" /><label for="s10-15">100</label></br>
         <hr>
-</form></br>
+    </form></br>
     <h2>Marketing Needs Chart – Results</h2>
     <p>Your results have dynamically plotted within the radar chart below.</p>
     <p>The connected dots graphically expose gaps or coverage
@@ -265,44 +286,51 @@
         <canvas id="radarchart">
     </div>
     <hr></br>
+
+    <!-- Mobile and safari don't really show this well, squishes image -->
+
     <div>
         <h2 id="example">EXAMPLE 1</h2>
         <p>Local business, niche industry</p></br>
-
-        <img src="https://www.tripwiremedia.com/wp-content/uploads/2020/12/example-1.png" alt="Example Chart 1" style="width:550px;height:550px;"><br></br>
-
-        <p>In this example result we can identify some common marketing gaps which regularly feature in gap 
+        <center>
+            <img src="https://www.tripwiremedia.com/wp-content/uploads/2020/12/example-1.png" alt="Example Chart 1"
+                style="width:550px;height:550px;"><br></br>
+        </center>
+        <p>In this example result we can identify some common marketing gaps which regularly feature in gap
             analysis for a small or local business.</p>
-        <p>The analysis shows a deficit in perceived awareness for their 
-            brand, and although their ‘branding’ is not too bad it still needs some work to better connect to their 
+        <p>The analysis shows a deficit in perceived awareness for their
+            brand, and although their ‘branding’ is not too bad it still needs some work to better connect to their
             target market (engagement).</p>
-            
-            <p>We also see some low rankings in trust (Q5) and likeability (Q6) which indicates more 
+
+        <p>We also see some low rankings in trust (Q5) and likeability (Q6) which indicates more
             work is needed to increase the brand position and engagement in their market.</p>
-            
-            <p>As is the case in many local businesses who build strong, lasting relationships with their customer base they are ranking well across the board for conversion, loyalty and advocacy.</p>
-            <p>As a result we can determine that the key goals for this businesses video strategy should be focussed on Brand Awareness and Social Engagement.
+
+        <p>As is the case in many local businesses who build strong, lasting relationships with their customer base they
+            are ranking well across the board for conversion, loyalty and advocacy.</p>
+        <p>As a result we can determine that the key goals for this businesses video strategy should be focussed on
+            Brand Awareness and Social Engagement.
         </p>
     </div>
     <hr></br>
     <div>
         <h2>EXAMPLE 2</h2>
         <p>Established bricks & mortar, newly added eCommerce</p></br>
-
-        <img src="https://www.tripwiremedia.com/wp-content/uploads/2020/12/example-2.png" alt="Example Chart 2" style="width:550px;height:550px;"><br></br>
-
+        <center>
+            <img src="https://www.tripwiremedia.com/wp-content/uploads/2020/12/example-2.png" alt="Example Chart 2"
+                style="width:550px;height:550px;"><br></br>
+        </center>
         <p>In this example result we can identify that this brand ranks highly
             in brand awareness and engagement indicating that there is a good
             perception in the market for this brand/product, building from its
             history in the industry and audience acceptance of the product/market
             fit.</p>
-            <p>Where there are clear gaps in this analysis are at the sales and postsales
+        <p>Where there are clear gaps in this analysis are at the sales and postsales
             end of the customer journey where it seems that there is room
             to improve the effectiveness of the brand’s marketing to better move
             an interested enquiry through to a sale and then to engage further
             post-sale to encourage repeat purchase and improve customer
             loyalty.</p>
-            <p>As a result we can determine that the key goals for this businesses
+        <p>As a result we can determine that the key goals for this businesses
             video strategy should be focussed on the goals of conversion and
             loyalty for maximum effectiveness.</p>
 
@@ -392,8 +420,7 @@
 
         var ctx = document.getElementById("radarchart");
         var data = {
-            labels: ['', '', '', '', '', '', '','', '', '', '', '', '', '', ''
-            ],
+            labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', ''],
             datasets: [{
                 label: "Marketing Coverage",
                 backgroundColor: "RGBa(1,1,1,.5)", //fill for chart graph
