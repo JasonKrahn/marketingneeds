@@ -50,7 +50,7 @@
         }
 
         p {
-            font-size: 18px;
+            font-size: 14px;
             font-weight: lighter;
             line-height: auto;
             margin: 8px;
@@ -95,6 +95,14 @@
             position: relative;
             padding-top: calc(100vw - 2em);
         }
+        @media print {
+            header, footer, aside, button, … {
+            display: none;
+        }
+        h2 {
+            page-break-before: always;
+  }
+}
         @media screen and (min-width: 550px) {
             .canvas-container {
                 padding-top: 550px;
@@ -107,7 +115,7 @@
             left: 0;
             width: 100%;
             max-width: 550px;
-            background-image: url('coverage-chart.svg');
+            background-image: url('https://www.tripwiremedia.com/wp-content/uploads/2020/12/coverage-chart-2.svg');
             background-repeat: no-repeat;
             background-position: center; 
             background-size: 88%;
@@ -133,7 +141,7 @@
             }
         }
         .example-image {
-            width: auto;
+            width: 400px;
             max-width: 100%;
         }
     </style>
@@ -141,6 +149,9 @@
 </head>
 
 <body>
+
+    
+<div id="content">
     <H1>Marketing Needs Analysis Map</H1>
     <p>Answer each of the questions below as best you can. Go with your gut feel, but be honest and thoughtful about
         your answers. After you’ve finished each question, the graph below will plot your results within your very own
@@ -379,7 +390,9 @@
         marketing strategy.</p>
     <p>See <a href="#example">some examples</a> below for a couple chart examples that outline ways to read
         your results</p><br>
-    <div class="canvas-container" style="">
+        <div><button onclick="window.print();return false;">Print this Page</button> </div>
+
+        <div class="canvas-container">
         <canvas id="radarchart">
     </div>
     <hr></br>
@@ -387,7 +400,7 @@
         <h2 id="example">EXAMPLE 1</h2>
         <p>Local business, niche industry</p></br>
 
-        <img class="example-image" src="example-1.png" alt="Example Chart 1">
+        <img class="example-image" src="https://www.tripwiremedia.com/wp-content/uploads/2020/12/example-1.png" alt="Example Chart 1">
 
         <p>In this example result we can identify some common marketing gaps which regularly feature in gap
             analysis for a small or local business.</p>
@@ -409,7 +422,7 @@
         <h2>EXAMPLE 2</h2>
         <p>Established bricks & mortar, newly added eCommerce</p></br>
 
-        <img class="example-image" src="example-1.png" alt="Example Chart 2" >
+        <img class="example-image" src="https://www.tripwiremedia.com/wp-content/uploads/2020/12/example-2.png" alt="Example Chart 2" >
 
         <p>In this example result we can identify that this brand ranks highly
             in brand awareness and engagement indicating that there is a good
@@ -427,6 +440,8 @@
             loyalty for maximum effectiveness.</p>
 
     </div>
+
+</div>
     <script>
         //----Question 1
         // Select all of the radio options for "question1"
@@ -683,7 +698,22 @@
             option.addEventListener('change', updateChart);
         });
     </script>
-
+    <script>
+        var doc = new jsPDF();
+     var specialElementHandlers = {
+         '#editor': function (element, renderer) {
+             return true;
+         }
+     };
+     
+     $('#cmd').click(function () {
+         doc.fromHTML($('#content').html(), 15, 15, {
+             'width': 170,
+                 'elementHandlers': specialElementHandlers
+         });
+         doc.save('sample-file.pdf');
+     });
+     </script>
 </body>
 
 </html>

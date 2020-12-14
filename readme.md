@@ -14,7 +14,7 @@ Goal for this is to have it on the website and be used to send to clients, who w
 
 - Firm up the css for responsiveity and mobile. Example images squish in mobile safari
 - Build a way so that allopws file / print to print the completed chart with the chart background.
-  Right now if you print the chart dissapears and just the plotted points show
+-  Right now if you print the chart dissapears and just the plotted points show
 
 ## If I get the time
 
