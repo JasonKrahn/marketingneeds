@@ -2,9 +2,9 @@
 
 ## Overview
 
-Goal for this is to have it on the website and be used to send to clients, who will fill it out and send a copy of the filled out form to themselves as well as us.
+A cornerstone of the digital strategy for Tripwire
 
-[https://www.tripwiremedia.com/marketing-need-analysis-map/](Website link)
+[Live and Current Version](https://www.tripwiremedia.com/marketing-need-analysis-map)
 
 - wordpress_coder.html is code I copy and paste into wordpress through the [coder](https://wordpress.org/plugins/wp-coder/) plugin.
 - The file has less css because the html on the web inherits css from wordpress
@@ -12,19 +12,22 @@ Goal for this is to have it on the website and be used to send to clients, who w
 
 ## Things to do/try
 
-- Firm up the css for responsiveity and mobile. Example images squish in mobile safari
-- Build a way so that allopws file / print to print the completed chart with the chart background.
--  Right now if you print the chart dissapears and just the plotted points show
+- Firm up the css for responsiveity and mobile. Example images squish in mobile safari [X]
+- Build a way so that allows file / print to print the completed chart with the chart background. [X]
+
+### Testing Page as New Branch
+
+- For Alex to view graph in real time
 
 ## If I get the time
 
-- Edit chart for more clarity in writing
-- Find a way to make the chart canvas responsive
+- Edit copy-writing
+- Magically send results to user via a click of the button
 
-## Things to get done here...
+## Things to get done here
 
 - Reduce the questions in the quiz, make it so there are 4 categories with 4 questions to each.
-- Awareness
-- Engagement
-- Conversion
-- Retention
+  - Awareness
+  - Engagement
+  - Conversion
+  - Retention
