@@ -20,3 +20,11 @@ Goal for this is to have it on the website and be used to send to clients, who w
 
 - Edit chart for more clarity in writing
 - Find a way to make the chart canvas responsive
+
+## Things to get done here...
+
+- Reduce the questions in the quiz, make it so there are 4 categories with 4 questions to each.
+- Awareness
+- Engagement
+- Conversion
+- Retention
