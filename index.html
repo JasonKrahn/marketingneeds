@@ -8,170 +8,16 @@
 <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 <title>Marketing Needs Analysis</title>
 
-<!-- Question 1-->
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css">
-    <style type="text/css">
-        h1 {
-            background-color: darkorange;
-            font: size 5vw;
-            color: black;
-            font-style: normal;
-            font-weight: bold;
-            text-decoration: none;
-            padding: 25px;
-
-        }
-
-        h3 {
-            font: size 5vw;
-            color: darkorange;
-        }
-
-        /*  h4 {
-                
-            } */
-
-
-        form {
-
-            font-size: medium;
-            margin: 4px;
-            line-height: 1.5rem;
-            display: block;
-
-        }
-
-        label,
-        input {
-
-            padding-left: .3rem;
-        }
-
-        p {
-            font-family: DINOT-Medium, sans-serif;
-            font-size: 15px;
-            font-weight: lighter;
-            line-height: auto;
-            margin: 8px;
-            border: 8px;
-        }
-
-        body {
-            font-family: DINOT-Medium, serif;
-            margin: 0;
-            padding: 0 1em;
-        }
-
-        canvas {
-
-            width: 100%;
-
-        }
-
-        .question {
-            font-family: open sans, sans-serif;
-            font-size: 20px;
-        }
-
-        label,
-        input {
-            padding-right: 1.3rem;
-            padding-left: .2rem;
-            line-height: 2.3rem;
-        }
-
-        /* 
-            Canvas {
-                height: 800px;
-                width: 800px;
-                display: block;
-            } 
-        */
-
-        hr {
-            margin: 2rem;
-        }
-
-        .canvas-container {
-            width: 100%;
-            height: 0;
-            margin: 5px;
-            position: relative;
-            padding-top: calc(100vw - 2em);
-        }
-
-        @media print {
-
-            header,
-            footer,
-            aside,
-            button,
-            … {
-                display: none;
-            }
-
-            h2 {
-                page-break-before: always;
-            }
-        }
-
-        @media screen and (min-width: 550px) {
-            .canvas-container {
-                padding-top: 550px;
-            }
-        }
-
-        #radarchart {
-            max-width: 100vw;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            max-width: 550px;
-            background-image: url('https://www.tripwiremedia.com/wp-content/uploads/2021/02/radar-graph-segments-current-01.svg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 88%;
-            padding-bottom: 14px;
-            /* not ideal using a hard value but it does the job of keeping the background image and the data centered*/
-            -webkit-print-color-adjust: exact;
-            /* Suggests to the browser to print background image */
-            print-color-adjust: exact;
-        }
-
-        @media screen and (min-width: 400px) {
-            #radarchart {
-                background-size: 91%;
-            }
-        }
-
-        @media screen and (min-width: 490px) {
-            #radarchart {
-                padding-bottom: 12px;
-                background-size: 93%;
-            }
-        }
-
-        @media screen and (min-width: 550px) {
-            #radarchart {
-                padding-bottom: 11px;
-                background-size: 95%;
-            }
-        }
-
-        .example-image {
-            width: 400px;
-            max-width: 100%;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href='main.css'>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
 </head>
 
 <body>
-    <div id="content"> </br>
+    <div id="content" class="pagewrap"> </br>
         <p>Answer each of the questions below as best you can. Go with your gut feel, but be honest and thoughtful about
             your answers. After you’ve finished each question, the graph below will plot your results within your very
             own Marketing Needs Analysis Map.</p>
@@ -411,10 +257,13 @@
         <p>See <a href="#example">some examples</a> below for a couple chart examples that outline ways to read
             your results</p><br>
         <div><button onclick="window.print();return false;">Print Your Results</button> </div>
+        </div>
 
-        <div class="canvas-container">
+
+        <div class="sidebar">
             <canvas id="radarchart">
         </div>
+        
         <hr>
 					</br>
         <div>
