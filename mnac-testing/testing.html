@@ -251,6 +251,7 @@
         
         <!--COLUMN 2-->
 
+
         <div class="column">
 
             <canvas id="radarchart">
@@ -261,9 +262,6 @@
         <footer>
             <h3>OUTPUT</h3>
             <p>This is where the outputs should show up. Comeing soon</p>
-
-                    <p id="question1"></p>
-
         </footer>
     
     </div>
@@ -359,13 +357,13 @@
 
     var ctx = document.getElementById("radarchart");
     var data = {
-        labels: [, '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''],
+        labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''],
         datasets: [{
             label: "Marketing Coverage",
             backgroundColor: "RGBa(1,1,1,.5)", //fill for chart graph
             borderColor: "RGBa(254,140,2,.9)", //line colour for points spans
             borderWidth: "3",
-            lineTension: ".01",
+            lineTension: "0",
             pointBackgroundColor: "RGBa(254,140,2)",
             pointBorderColor: "",
             pointHoverBackgroundColor: "RGBa(254,140,2)",
