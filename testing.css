@@ -32,8 +32,7 @@ header {
 	margin: 2px;
 	padding: 10px;
 	&:first-child { margin-left: 0; }
-	&:last-child { margin-right: 0; }
-	
+	&:last-child { margin-right: 0; }	
 }
 
 footer {
@@ -45,7 +44,7 @@ footer {
     position: sticky;
     top: 0px;
     width: 100%;
-    background-image: url('https://www.tripwiremedia.com/wp-content/uploads/2021/02/radar-graph-segments-current-rotate-test-01.svg');
+    background-image: url('https://www.tripwiremedia.com/wp-content/uploads/2021/02/Graph02-01.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 95%;
