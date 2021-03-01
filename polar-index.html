@@ -27,15 +27,15 @@
                     target market?</H5>
                     <div class="slidecontainer">
                         Low <input class="slider" id="a-0" type="range" name="question1" min="0" max="100" value="50"/> High
-                    <p>Value: 
-                        
-                    </p></div>
+
+                </div>
                 <hr>
                 <!-- Question 2-->
                 <H5 class="question"><b>Q2</b> - Of those that are aware of your business, to what extent do you feel they understand 
                     the "what" and "how" of your business?</H5>
                     <div class="slidecontainer">
                         Low <input class="slider" id="a-1" type="range" name="question2" min="0" max="100" value="50"/> High
+
                     </div>
                 <hr>
                 <!-- Question 3-->
@@ -43,6 +43,7 @@
                     resonate with your target audience? </H5>
                     <div class="slidecontainer">
                         Low <input class="slider" id="a-2" type="range" name="question3" min="0" max="100" value="50"/> High
+
                     </div>
                 <hr>
                 <!-- Question 4-->
@@ -50,6 +51,7 @@
                     service?</H5>
                     <div class="slidecontainer">
                         Low <input class="slider" id="a-3" type="range" name="question4" min="0" max="100" value="50"/> High
+
                     </div>
                 <hr>
                 <!-- Question 5-->
@@ -57,6 +59,7 @@
                     expertise or niche knowledge?</H5>
                     <div class="slidecontainer">
                         Low <input class="slider" id="e-0" type="range" name="question5" min="0" max="100" value="50"/> High
+
                     </div>
                 <hr>
                 <!-- Question 6-->
@@ -64,13 +67,15 @@
                     product or service. </H5>
                     <div class="slidecontainer">
                         Low <input class="slider" id="e-1" type="range" name="question6" min="0" max="100" value="50"/> High
+
                     </div>
                 <hr>
                 <!-- Question 7-->
                 <H5 class="question"><b>Q7</b> - Considering someone who is not a current or past customer. How would you 
                     rate their likely level of perceived trust in your brand/business to deliver what you promise?</H5>
                     <div class="slidecontainer">
-                        Low <input class="slider" id="a-2" type="range" name="question7" min="0" max="100" value="50"/> High
+                        Low <input class="slider" id="e-2" type="range" name="question7" min="0" max="100" value="50"/> High
+
                     </div>
                 <hr>
                 <!-- Question 8-->
@@ -78,6 +83,7 @@
                     page, how would you rate the likelihood for this content to be shared, commented on or 'liked' by your audience?</H5>
                     <div class="slidecontainer">
                         Low <input class="slider" id="e-3" type="range" name="question8" min="0" max="100" value="50"/> High
+
                     </div>
                 <hr>
                 <!-- Question 9-->
@@ -85,12 +91,14 @@
                     product/service?</H5>
                     <div class="slidecontainer">
                         Low <input class="slider" id="c-0" type="range" name="question9" min="0" max="100" value="50"/> High
+
                     </div>
                 <hr>
                 <!-- Question 10-->
                 <H5 class="question"><b>Q10</b> - How easy is it for a customer to purchase your product?</H5>
                 <div class="slidecontainer">
                     Low <input class="slider" id="c-1" type="range" name="question10" min="0" max="100" value="50"/> High
+
                 </div>
             <hr>
                 <!-- Question 11-->
@@ -98,12 +106,14 @@
                     customer or client?</H5>
                     <div class="slidecontainer">
                         Low <input class="slider" id="c-2" type="range" name="question11" min="0" max="100" value="50"/> High
+
                     </div>
                 <hr>
                 <!-- Question 12-->
                 <H5 class="question"><b>Q12</b> - rate the importance of conversion tactics in your annual marketing budget.</H5>
                 <div class="slidecontainer">
-                    Low <input class="slider" id="a-3" type="range" name="question12" min="0" max="100" value="50"/> High
+                    Low <input class="slider" id="c-3" type="range" name="question12" min="0" max="100" value="50"/> High
+
                 </div>
             <hr>
                 <!-- Question 13-->
@@ -111,6 +121,7 @@
                     often do you maintain contact with them).</H5>
                     <div class="slidecontainer">
                         Low <input class="slider" id="r-0" type="range" name="question13" min="0" max="100" value="50"/> High
+
                     </div>
                 <hr>
                 <!-- Question 14-->
@@ -118,6 +129,7 @@
                     recurring clients?</H5>
                     <div class="slidecontainer">
                         Low <input class="slider" id="r-1" type="range" name="question14" min="0" max="100" value="50"/> High
+
                     </div>
                 <hr>
                 <!-- Question 15-->
@@ -126,6 +138,7 @@
                 </H5>
                 <div class="slidecontainer">
                     Low <input class="slider" id="r-2" type="range" name="question15" min="0" max="100" value="50"/> High
+
                 </div>
             <hr>
                 <!-- Question 16-->
@@ -133,6 +146,7 @@
                     be to refer you to others?</H5>
                     <div class="slidecontainer">
                         Low <input class="slider" id="r-3" type="range" name="question16" min="0" max="100" value="50"/> High
+
                     </div>
                 <hr>
             </form>
@@ -143,21 +157,149 @@
         <div class="column">
 
             <canvas id="radarchart">
+                <p align="center">Value: <span id="16"></span></p>
         </div>
         
     </section>	
         
         <footer>
             <h3>OUTPUT</h3>
-            <p>This is where the outputs should show up. Comeing soon</p>
-
-                    <p id="question1"></p>
 
         </footer>
     
     </div>
 </body>
 </div>
+
+<script>
+    var answer1 = document.getElementById("a-0");
+    var output = document.getElementById("1");
+    output.innerHTML = answer1.value;
+    
+    answer1.oninput = function() {
+      output.innerHTML = this.value;
+    }
+
+    var answer2 = document.getElementById("a-1");
+    var output = document.getElementById("2");
+    output.innerHTML = answer2.value;
+    
+    answer2.oninput = function() {
+      output.innerHTML = this.value;
+    }
+
+    var answer3 = document.getElementById("a-2");
+    var output = document.getElementById("3");
+    output.innerHTML = answer3.value;
+    
+    answer3.oninput = function() {
+      output.innerHTML = this.value;
+    }
+
+    var answer4 = document.getElementById("a-3");
+    var output = document.getElementById("4");
+    output.innerHTML = answer4.value;
+    
+    answer4.oninput = function() {
+      output.innerHTML = this.value;
+    }
+
+    var answer5 = document.getElementById("e-0");
+    var output = document.getElementById("5");
+    output.innerHTML = answer5.value;
+    
+    answer5.oninput = function() {
+      output.innerHTML = this.value;
+    }
+
+    var answer6 = document.getElementById("e-1");
+    var output = document.getElementById("6");
+    output.innerHTML = answer6.value;
+    
+    answer6.oninput = function() {
+      output.innerHTML = this.value;
+    }
+
+    var answer7 = document.getElementById("e-2");
+    var output = document.getElementById("7");
+    output.innerHTML = answer7.value;
+    
+    answer7.oninput = function() {
+      output.innerHTML = this.value;
+    }
+
+    var answer8 = document.getElementById("e-3");
+    var output = document.getElementById("8");
+    output.innerHTML = answer8.value;
+    
+    answer8.oninput = function() {
+      output.innerHTML = this.value;
+    }
+
+    var answer9 = document.getElementById("c-0");
+    var output = document.getElementById("9");
+    output.innerHTML = answer9.value;
+    
+    answer9.oninput = function() {
+      output.innerHTML = this.value;
+    }
+
+    var answer10 = document.getElementById("c-1");
+    var output = document.getElementById("10");
+    output.innerHTML = answer10.value;
+    
+    answer10.oninput = function() {
+      output.innerHTML = this.value;
+    }
+
+    var answer11 = document.getElementById("c-2");
+    var output = document.getElementById("11");
+    output.innerHTML = answer11.value;
+    
+    answer11.oninput = function() {
+      output.innerHTML = this.value;
+    }
+
+    var answer12 = document.getElementById("c-3");
+    var output = document.getElementById("12");
+    output.innerHTML = answer12.value;
+    
+    answer12.oninput = function() {
+      output.innerHTML = this.value;
+    }
+
+    var answer13 = document.getElementById("r-0");
+    var output = document.getElementById("13");
+    output.innerHTML = answer13.value;
+    
+    answer13.oninput = function() {
+      output.innerHTML = this.value;
+    }
+
+    var answer14 = document.getElementById("r-1");
+    var output = document.getElementById("14");
+    output.innerHTML = answer14.value;
+    
+    answer14.oninput = function() {
+      output.innerHTML = this.value;
+    }
+
+    var answer15 = document.getElementById("r-2");
+    var output = document.getElementById("15");
+    output.innerHTML = answer15.value;
+    
+    answer15.oninput = function() {
+      output.innerHTML = this.value;
+    }
+
+    var answer16 = document.getElementById("r-3");
+    var output = document.getElementById("16");
+    output.innerHTML = answer16.value;
+    
+    answer16.oninput = function() {
+      output.innerHTML = this.value;
+    }
+    </script>
 
 <script>
     //----Question 1 AWARENESS
@@ -249,7 +391,7 @@
 
     var ctx = document.getElementById("radarchart");
     var data = {
-        labels: ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''],
+        labels: ['', '', '', ''],
         datasets: [{
             label: "Marketing Coverage",
             backgroundColor: "RGBa(1,1,1,.5)", //fill for chart graph
@@ -265,24 +407,12 @@
                 `${question1}`, // Initialize the value at the currently selected option on page load.
                 `${question2}`,
                 `${question3}`,
-                `${question4}`,
-                `${question5}`,
-                `${question6}`,
-                `${question7}`,
-                `${question8}`,
-                `${question9}`,
-                `${question10}`,
-                `${question11}`,
-                `${question12}`,
-                `${question13}`,
-                `${question14}`,
-                `${question15}`,
-                `${question16}`
+                `${question4}`
             ]
         }]
     };
     var myRadarChart = new Chart(ctx, {
-        type: 'radar',
+        type: 'polarArea',
         data: data,
         options: {
             scale: {
@@ -352,7 +482,6 @@
                 break;
             case 'question11':
                 myRadarChart.data.datasets[0].data[10] = dataPoint;
-                // addData(myRadarChart, this.name, dataPoint);
                 myRadarChart.update();
                 break;
             case 'question12':
