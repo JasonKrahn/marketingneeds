@@ -136,7 +136,7 @@ div.sticky {
     background-image: url('https://www.tripwiremedia.com/wp-content/uploads/2021/02/radar-graph-segments-current-01.svg');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 88%;
+    background-size: 50%;
     padding-bottom: 14px;
     /* not ideal using a hard value but it does the job of keeping the background image and the data centered*/
     -webkit-print-color-adjust: exact;

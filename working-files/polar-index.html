@@ -157,7 +157,7 @@
         <div class="column">
 
             <canvas id="radarchart">
-                <p align="center">Value: <span id="16"></span></p>
+
         </div>
         
     </section>	
@@ -323,6 +323,9 @@
     const question4Choices = document.querySelectorAll(`[name="question4"]`);
     let question4 = document.querySelector(`[name="question4"]:checked`) ? parseInt(document.querySelector(
         `[name="question4"]:checked`).value) : 0;
+    
+    // Select all of the radio options for "question1"
+    let awarenessChoices = (question1 + question2 + question3 + question4);
 
     //----Question 5 ENGAGEMENT
 
@@ -404,7 +407,7 @@
             pointHoverBorderColor: "RGBa(254,140,2)",
             hoverBorderColor: "RGB(254,140,2)",
             data: [
-                `${question1}`, // Initialize the value at the currently selected option on page load.
+                `${awarenessChoices}`, // Initialize the value at the currently selected option on page load.
                 `${question2}`,
                 `${question3}`,
                 `${question4}`
