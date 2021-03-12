@@ -15,19 +15,19 @@ A cornerstone of the digital strategy for Tripwire
 - Firm up the css for responsiveity and mobile. Example images squish in mobile safari [X]
 - Build a way so that allows file / print to print the completed chart with the chart background. [X]
 
-### Testing Page as New Branch
+## March 2021 Update
 
-- For Alex to view graph in real time
+- We are going to a simpler form for the results, serving up a jpeg.
+- Moving forward styling will be a priority and also making a better image for the results.
 
-## If I get the time
-
-- Edit copy-writing
-- Magically send results to user via a click of the button
-
-## Things to get done here
+## Done
 
 - Reduce the questions in the quiz, make it so there are 4 categories with 4 questions to each.
   - Awareness
   - Engagement
   - Conversion
   - Retention
+- Testing Page as New Branch, allow Alex to view graph in real time
+- new graph
+- added logic
+- logic has string results
