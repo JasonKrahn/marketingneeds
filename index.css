@@ -1,50 +1,76 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import "https://fonts.googleapis.com/css?family=Open+Sans";
+@import "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300";
 
 * { box-sizing: border-box; }
+html, body { 
+		font-family: 'Open Sans', sans-serif;
+		color: rgb(65, 65, 65);
+		font-size: medium;
+		padding-left: 10px;
+	  }
+	  h1 {
+		font-size: 2em;
+		margin: 0.67em 0;
+	  }
 
-body { 
-	font-family: 'Open Sans', sans-serif;
-	color: rgb(65, 65, 65);
-	font-size: medium;
-	padding-left: 10px;
-  }
 
-img {
-	width:100%;
+.technical {
+	font-family: 'courier';
+	font-size: small;
 }
 
 /* STRUCTURE */
 
 /* SLIDER */
-.ab {
-	position: absolute;
-	top: 0px;
-}
 
 .slidecontainer {
 	width: 100%;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-left: 20%;
+	padding-right: 20%;
 	position: relative;
+  }
+  .rating {
+	display: flex;
+	justify-content: space-between;
+
   }
   
   .slider {
 	-webkit-appearance: none;
 	width: 100%;
 	height: 15px;
-	background: #ededed;
-	outline: #fcaf17;
+	border-radius: 5px;  
+	background: #d3d3d3;
+	outline: none;
 	opacity: 0.7;
 	-webkit-transition: .2s;
 	transition: opacity .2s;
   }
   
+  .slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%; 
+	background: #fcaf17;
+	cursor: e-resize;
+  }
+  
+  .slider::-moz-range-thumb {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: #fcaf17;
+	cursor: e-resize;
+  }
+  
   .slider:hover {
 	opacity: 1;
   }
-/* CHART 
 
-/*  
+	  
+/* CHART */
 
  #radarchart {
     max-width: 400px;
@@ -54,16 +80,22 @@ img {
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	  }
-	  
+
+	  /*
    background-image: url('https://www.tripwiremedia.com/wp-content/uploads/2021/03/radar-graph-segments-current-01.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 95%;
-    padding-bottom: 40px; */
+    padding-bottom: 40px;
+	*/
+	
+	
+	
+	
 
 /* @media screen and (min-width: 800px) {
     #radarchart {
         background-size: 91%;
     }
 }
- */
+*/

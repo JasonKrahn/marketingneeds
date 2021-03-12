@@ -87,7 +87,14 @@ function results() {
 
   // logic
 
-  document.write(`${lowNum} is the lowest number and it belongs to ${lowName}`);
+  document.write(`<span class="technical">${lowNum} is the lowest ## and it belongs to ${lowName}<br><br><b>Reference:</b><br>
+  <p><b>1</b> 
+  ${question1}/10,  <b>2</b> ${question2}/10,  <b>3</b> ${question3}/10,  <b>4</b> ${question4}/10</p>  <p><b>5</b> 
+  ${question5}/10,  <b>6</b> ${question6}/10,  <b>7</b> ${question7}/10,  <b>8</b> ${question8}/10</p>  <p><b>9</b>
+   ${question9}/10,  <b>10</b> ${question10}/10,  <b>11</b> ${question11}/10,  <b>12</b> ${question12}/10</p>  <p><b>13</b>
+   ${question13}/10,  <b>14</b> ${question14}/10,  <b>15</b> ${question15}/10,  <b>16</b> ${question16}/10 = ${engagement}</p></span>
+
+  `);
 
   // zero out scores for chart
 
@@ -132,7 +139,7 @@ function results() {
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Your Results</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='testing.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js'></script>
     </head>
     <h1>Output</h1>
@@ -142,13 +149,6 @@ function results() {
   document.write(
     `<br><br><br><br><hr><h1>Chart Output</h1><canvas id="radarchart"></canvas>`
   );
-
-  document.write(`<br><hr><h1>Question Result Reference</h1>
-  <p><b>1</b> ${question1}/10,  <b>2</b> ${question2}/10,  <b>3</b> ${question3}/10,  <b>4</b> ${question4}/10</p>
-  <p><b>5</b> ${question5}/10,  <b>6</b> ${question6}/10,  <b>7</b> ${question7}/10,  <b>8</b> ${question8}/10</p>
-  <p><b>9</b> ${question9}/10,  <b>10</b> ${question10}/10,  <b>11</b> ${question11}/10,  <b>12</b> ${question12}/10</p>
-  <p><b>13</b> ${question13}/10,  <b>14</b> ${question14}/10,  <b>15</b> ${question15}/10,  <b>16</b> ${question16}/10</p>
-  `);
 
   // CANVAS JAVASCRIPT
 
