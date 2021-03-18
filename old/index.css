@@ -54,7 +54,7 @@ html, body {
 	height: 15px;
 	border-radius: 50%; 
 	background: #fcaf17;
-	cursor: e-resize;
+	cursor: pointer;
   }
   
   .slider::-moz-range-thumb {
@@ -62,7 +62,7 @@ html, body {
 	height: 15px;
 	border-radius: 50%;
 	background: #fcaf17;
-	cursor: e-resize;
+	cursor: pointer;
   }
   
   .slider:hover {

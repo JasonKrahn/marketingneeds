@@ -1,56 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Quiz</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
-    <script src='form.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js'></script>
+    <title>Marketing needs survey</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="surveyJS.css">
 </head>
+
 <body>
 
-        <h1>Inputs</h1>
-            <p>THIS IS A CONCEPT TEST</p>
-            <p>Move the sliders around, or just press 'Submit' the default values will tie break to the top category. Please note:</p>
-            <p></p>
-            <ul>
-                <li>There is no styling as this is a rebuild</li>
-                <li>Images are sourced from excel screengrabs, so it is <b>not final</b> by any stretch</li>
-                <li>For each question: 10 = high/very positive/very high, 0 = zero/very negative/very low</li>
-                <li><a href="https://www.tripwiremedia.com/marketing-need-analysis-map">See the questions here</a></li>
-            </ul>
-        </p>
-        <div id="questionForm"></div>
-            <form onsubmit="return results();">
-                => <input type="submit"><hr>
-                    <p class="question">Q1 - How would you rate the current level of awareness of your brand/business with your target market?</p>
-                    <div class="slidecontainer">
-                        <div class ="rating" <span>Very Low</span><span>Mid</span><span>Very High</span></div><input class="slider" id="question1" type="range" name="question1" min="0" max="10" value="0"/></p>
-                        <div class ="rating" <span>Very Low</span><span>Mid</span><span>Very High</span></div><input class="slider" id="question2" type="range" name="question2" min="0" max="10" value="0"/></p>
-                        <div class ="rating" <span>Very Low</span><span>Mid</span><span>Very High</span></div><input class="slider" id="question3" type="range" name="question3" min="0" max="10" value="0"/></p>
-                        <div class ="rating" <span>Very Low</span><span>Mid</span><span>Very High</span></div><input class="slider" id="question4" type="range" name="question4" min="0" max="10" value="0"/></p>
-                    </div><hr>
-                    <div class="slidecontainer">
-                        <div class ="rating" <span>Very Low</span><span>Mid</span><span>Very High</span></div><input class="slider" id="question5" type="range" name="question5" min="0" max="10" value="0"/></p>
-                        <div class ="rating" <span>Very Low</span><span>Mid</span><span>Very High</span></div><input class="slider" id="question6" type="range" name="question6" min="0" max="10" value="0"/></p>
-                        <div class ="rating" <span>Very Low</span><span>Mid</span><span>Very High</span></div><input class="slider" id="question7" type="range" name="question7" min="0" max="10" value="0"/></p>
-                        <div class ="rating" <span>Very Low</span><span>Mid</span><span>Very High</span></div><input class="slider" id="question8" type="range" name="question8" min="0" max="10" value="0"/></p>
-                    </div><hr>
-                    <div class="slidecontainer">
-                        <div class ="rating" <span>Very Low</span><span>Mid</span><span>Very High</span></div><input class="slider" id="question9" type="range" name="question9" min="0" max="10" value="0"/></p>
-                        <div class ="rating" <span>Very Low</span><span>Mid</span><span>Very High</span></div><input class="slider" id="question10" type="range" name="question10" min="0" max="10" value="0"/></p>
-                        <div class ="rating" <span>Very Low</span><span>Mid</span><span>Very High</span></div><input class="slider" id="question11" type="range" name="question11" min="0" max="10" value="0"/></p>
-                        <div class ="rating" <span>Very Low</span><span>Mid</span><span>Very High</span></div><input class="slider" id="question12" type="range" name="question12" min="0" max="10" value="0"/></p>
-                    </div><hr>
-                    <div class="slidecontainer">
-                        <div class ="rating" <span>Very Low</span><span>Mid</span><span>Very High</span></div><input class="slider" id="question13" type="range" name="question13" min="0" max="10" value="0"/></p>
-                        <div class ="rating" <span>Very Low</span><span>Mid</span><span>Very High</span></div><input class="slider" id="question14" type="range" name="question14" min="0" max="10" value="0"/></p>
-                        <div class ="rating" <span>Very Low</span><span>Mid</span><span>Very High</span></div><input class="slider" id="question15" type="range" name="question15" min="0" max="10" value="0"/></p>
-                        <div class ="rating" <span>Very Low</span><span>Mid</span><span>Very High</span></div><input class="slider" id="question16" type="range" name="question16" min="0" max="10" value="0"/></p>
-                    </div>
-            </form>
+    <div class="quiz-container">
+        <div class="title">Video Marketing Needs Survey</div>
+        <div id="question" class="question"></div>
+        <label class="option">
+            <input type="radio" name="option" value="1" />
+            <span class="option1"></span>
+        </label>
+        <label class="option">
+            <input type="radio" name="option" value="2" />
+            <span class="option2"></span>
+        </label>
+        <label class="option">
+            <input type="radio" name="option" value="3" />
+            <span class="option3"></span>
+        </label>
+        <label class="option">
+            <input type="radio" name="option" value="4" />
+            <span class="option4"></span>
+        </label>
+        <!-- Buttons -->
+        <div class="controls">
+            <button class="previous">Previous</button>
+            <button class="next">Next</button>
         </div>
-    </body>
+    </div>
+
+    <div class="result">
+
+    </div>
+
+    <script src=surveyJS.js></script>
+    <script src="mainSurveyJS.js"></script>
+</body>
+
 </html>

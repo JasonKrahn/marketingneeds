@@ -97,6 +97,8 @@ function results() {
   `);
 
   // zero out scores for chart
+  // i could write this as a CASE
+  // Responses could be a function with the minNum and minName passed as arguments
 
   if (lowName === "Awareness") {
     awareness = 40;
@@ -139,18 +141,20 @@ function results() {
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Your Results</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='tripwire.css'>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js'></script>
     </head>
-    <h1>Output</h1>
-    <h2>Wow, your are way low on ${lowName}. So low, you should be embarassed....</h2> 
-    <p>...${response}</p><br><hr><img src="${image}">`);
-
+    <h1>Results</h1><hr><img src="${image}">
+    <h4>Based on your responses, the business pillar that requires marketing support has been identified as ${lowName}.</h4> 
+    <p>${response}</p><br><hr>`);
+/*
   document.write(
     `<br><br><br><br><hr><h1>Chart Output</h1><canvas id="radarchart"></canvas>`
   );
+  */
+}
 
-  // CANVAS JAVASCRIPT
+  /* CANVAS JAVASCRIPT
 
   const canvas = document.getElementById("radarchart");
   const data = {
@@ -183,3 +187,5 @@ function results() {
     },
   });
 }
+*/
+
