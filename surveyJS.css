@@ -1,8 +1,10 @@
 @import "https://fonts.googleapis.com/css?family=Open+Sans";
 @import "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300";
 
+
 html {
     box-sizing: border-box;
+    min-width: auto;
   }
   *,
   *:before,
@@ -15,14 +17,13 @@ html {
     font-family: sans-serif;
     font-weight: 100;
     line-height: 1.7rem;
-    background: no-repeat linear-gradient(0deg, #ffffff, #d5d5d5 );
+    /* background: no-repeat linear-gradient(0deg, #ffffff, #d5d5d5 );*/
   }
   h1 {
     font-size: 2em;
     margin: 0.67em 0;
   }
   .quiz-container {
-    box-shadow: 1px 1px 1px 1px rgba(123, 123, 123, 0.2);
     text-shadow: 1px 1px white;
     padding: 2rem;
     text-shadow: 0 1px #00000010;
@@ -30,8 +31,9 @@ html {
     margin: 5rem auto;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(360deg, transparent, #ffffff);
-    /* min-height: 100vh; */
+    /* background: linear-gradient(360deg, transparent, #ffffff);
+    box-shadow: 1px 1px 1px 1px rgba(123, 123, 123, 0.2);
+     min-height: 100vh; */
   }
   .title {
     margin-top: 0;
@@ -102,13 +104,13 @@ html {
   }
   .result {
     display: flex;
+    max-width: 900px;
     flex-direction: column;
     padding: 2rem;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    font-size: 2.5rem;
-    /* min-height: 100vh; */
+    text-align: auto;
+    /*min-height: 100vh; */
   }
   .results-heading {
     color: #00000099;
@@ -124,7 +126,9 @@ html {
     align-items: flex-start;
     padding: 0 2rem;
     margin-bottom: 2rem;
+    line-height: auto;
+    max-width: 900px;
   }
   .summary h1 {
     align-self: center;
-  }
+  };
