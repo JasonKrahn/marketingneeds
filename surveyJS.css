@@ -2,6 +2,7 @@
 @import "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300";
 
 
+
 html {
     box-sizing: border-box;
     min-width: auto;
@@ -31,6 +32,7 @@ html {
     margin: 5rem auto;
     display: flex;
     flex-direction: column;
+    transition: color 500ms ease-in-out, opacity 1000ms ease-in, background-color 500ms linear;
     /* background: linear-gradient(360deg, transparent, #ffffff);
     box-shadow: 1px 1px 1px 1px rgba(123, 123, 123, 0.2);
      min-height: 100vh; */
@@ -69,6 +71,10 @@ html {
     margin: 1rem;
 	display: inline;
   }
+  .funnelimg {
+    max-width: 90%;
+    height: auto;
+  }
   button {
     padding: 0.5rem 1.5rem;
     border: none;
@@ -103,14 +109,18 @@ html {
     box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
   }
   .result {
+    font-size: 1rem;
+    text-shadow: 1px 1px #ffffff50;
+    color: #00000099;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
     display: flex;
-    max-width: 900px;
     flex-direction: column;
-    padding: 2rem;
-    justify-content: center;
-    align-items: center;
-    text-align: auto;
-    /*min-height: 100vh; */
+    align-items: flex-start;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+    line-height: auto;
+    max-width: 900px;
   }
   .results-heading {
     color: #00000099;
@@ -129,6 +139,11 @@ html {
     line-height: auto;
     max-width: 900px;
   }
-  .summary h1 {
+  .summary h1, h2, img {
     align-self: center;
   };
+
+  @keyframes shad-anim {
+    0% {background-position: 0 0}
+    0% {background-position: 100% -100%}
+    }

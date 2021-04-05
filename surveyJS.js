@@ -1,24 +1,24 @@
 const questions = [
     {
       "question": "How would you rate the current level of awareness of your brand/business with your target market?",
-      "answer1": "Very high!",
+      "answer1": "Very high",
       "answer1Total": "4",
       "answer2": "Good",
       "answer2Total": "3",
       "answer3": "Poor",
       "answer3Total": "2",
-      "answer4": "Terrible",
+      "answer4": "Very low",
       "answer4Total": "1"
     },
     {
-      "question": `Of those that are aware of your brand/business, to what extent do you feel they understand the "what" and "how" of your brand/business?`,
+      "question": `Of those that are aware of your brand/business, how many do you feel understand the "what" and "how" of your brand/business?`,
       "answer1": "Pretty much everyone",
       "answer1Total": "4",
       "answer2": "Most",
       "answer2Total": "3",
       "answer3": "Very few",
       "answer3Total": "2",
-      "answer4": "Probably no one...",
+      "answer4": "Probably none",
       "answer4Total": "1"
     },
     {
@@ -38,17 +38,16 @@ const questions = [
       "answer1Total": "40",
       "answer2": "Depends on what kind of post",
       "answer2Total": "30",
-      "answer3":
-        "Unlikly, but not out of the question",
+      "answer3": "It's rare",
       "answer3Total": "20",
-      "answer4": "We feel like we publish content into the void",
+      "answer4": "We feel like we publish content that no one sees",
       "answer4Total": "10"
     },
     {
       "question": "How easy is it for a customer to purchase your product?",
       "answer1": "It's is a frictionless experience",
       "answer1Total": "400",
-      "answer2": "Not bad",
+      "answer2": "It's easy enough",
       "answer2Total": "300",
       "answer3": "It is not very easy",
       "answer3Total": "200",
@@ -61,7 +60,7 @@ const questions = [
       "answer1":
         "Very effective",
       "answer1Total": "400",
-      "answer2": "Generally effective",
+      "answer2": "Mostly effective",
       "answer2Total": "300",
       "answer3": "Could be better",
       "answer3Total": "200",
