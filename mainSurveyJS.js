@@ -158,7 +158,7 @@ function loadNextQuestion() {
             <p>Having at least one video per stage 
             is the key to a full video marketing strategy. </p>
             <hr></hr>
-            <img class="funnelimg" src="https://www.tripwiremedia.com/wp-content/uploads/2021/04/Tunnel-v3-02.svg"></img>
+            <img class="funnelimg" src="https://www.tripwiremedia.com/wp-content/uploads/2021/04/Tunnel-v3.jpg"></img>
             <br/>
             <h3>Funnel Stages</h3>
             <p><b>Awareness:</b> Increasing your brand’s overall reach, influence and personal emotional connection with your customers. The goal here is to get 
