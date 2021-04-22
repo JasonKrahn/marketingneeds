@@ -1,28 +1,4 @@
 
-/* 
-html {
-    box-sizing: border-box;
-    min-width: auto;
-  }
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    font-weight: 100;
-    line-height: 1.7rem;
-    background: no-repeat linear-gradient(0deg, #ffffff, #d5d5d5 );
-  }
-
-  h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-  }
-    */
   .quiz-container {
     text-shadow: 1px 1px white;
     padding: 1rem;
@@ -114,24 +90,7 @@ html {
     font-weight: 500;
     box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
   }
-  /*
-  .result {
-    font-size: 1rem;
-    text-shadow: 1px 1px #ffffff50;
-    color: #00000099;
-    background: rgba(255, 255, 255, 0.4);
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0 2rem;
-    margin-bottom: 2rem;
-    line-height: auto;
-    max-width: 900px;
-  }
-  .results-heading {
-    color: #00000099;
-  }  */
+
   .summary {
     font-size: 1rem;
     text-shadow: 1px 1px #ffffff50;
@@ -146,14 +105,3 @@ html {
     line-height: auto;
     max-width: 900px;
   }
-  /* 
-  .summary h1, h2, img {
-    align-self: center;
-  };
-  
-
-  @keyframes shad-anim {
-    0% {background-position: 0 0}
-    0% {background-position: 100% -100%}
-    }
-    */

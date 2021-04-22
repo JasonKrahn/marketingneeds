@@ -80,21 +80,21 @@ function loadNextQuestion() {
     lowest = {
       value: awarenessDigit,
       name: "awareness",
-      string: `<p>Based on the results of this quiz, the <b>awareness</b> stage within your marketing funnel may be the best place to start when developing a video.</p>
-      <p>The awareness stage is at the top of the marketing funnel, often the first step on the way to becoming your customer.</p> 
-      <p>Here, the audience is just starting to realize they have a problem that needs solving. They likely do not know how you could help or even that you exist.  At this point, we want to grab attention and make them aware of your brand. You do not want to get too heavy with selling yet, but you do want to educate, entertain, or otherwise engage your leads.</p>
+      string: `<p>Your biggest area of opportunity is in the <b>awareness</b> stage of your marketing funnel.</p>
+      <p>The  awareness stage is at the top of the marketing funnel, often the first step on the way to becoming your customer.</p> 
+      <p>Here, the audience is just starting to realize they have a problem that needs solving. They likely do not know how you could help or even that you exist. At this point, we want to grab attention and make them aware of your brand. You do not want to get too heavy with selling yet, but you do want to educate, entertain, or otherwise engage your leads.</p>
       <p>You might not have considered video as awareness stage content, but certain kinds of videos are ideal for captivating your target audience on a large scale and drawing them in by speaking to their values, cares, and concerns.</p>
       `,
-      image: "awareness.png",
+      image: "",
       video: `<div style='padding:56.25% 0 0 0;position:relative;'><iframe src='https://vimeo.com/showcase/8327803/embed' allowfullscreen frameborder='0' style='position:absolute;top:0;left:0;width:100%;height:100%;'></iframe></div>`,
     };
   } else if (lowestCategory >= engagementDigit) {
     lowest = {
       value: engagementDigit,
       name: "engagement",
-      string: `<p>Based on the results of this quiz, the <b>engagement</b> stage within your marketing funnel may be the best place to start when developing a video plan.</p>
+      string: `<p>Your biggest area of opportunity is in the <b>engagement</b> stage of your marketing funnel.</p>
       <p>The engagement (sometimes refered to as <em>consideration</em>) stage is within the middle of the marketing funnel, often the second step on the way to becoming your customer.</p> 
-      <p>Here, the audience is more knowledgeable about their problem or need than they were at the awareness stage, and now they're researching all the potential solutions. They likely don't know how you could help or even that you exist.  At this point, we want to grab attention and make them aware of your brand. You don't want to get too heavy with selling yet, but you do want to educate, entertain or otherwise engage your leads.</p>
+      <p>Here, the audience is more knowledgeable about their problem or need than they were at the awareness stage, and now they're researching all the potential solutions. They likely don't know how you could help or even that you exist. At this point, we want to grab attention and make them aware of your brand. You don't want to get too heavy with selling yet, but you do want to educate, entertain or otherwise engage your leads.</p>
       <p>At this level, leads are more engaged than they were at the top of the funnel, but they're also becoming more aware of their options, your competitors and how they differ from you.</p>
       `,
       image: "",
@@ -104,7 +104,7 @@ function loadNextQuestion() {
     lowest = {
       value: conversionDigit,
       name: "conversion",
-      string: `<p>Based on the results of this quiz, the <b>conversion</b> stage within your marketing funnel may be the best place to start when developing a video plan.</p>
+      string: `<p>Your biggest area of opportunity is in the <b>conversion</b> stage stage of the marketing funnel.</p>
       <p>The conversion stage is one of the last stops within the marketing funnel, and your potential customer already has a degree of purchase intent.</p> 
       <p>Here, the audience is sufficiently educated about their needs, knows the solution to their problem and is at the point of making a purchase decision. They have you, along with all your competitors, in mind and likely are seeking answers to more nuanced questions they have left before becoming a customer.</p>
       <p>At this level, leads are looking at the finer details the video content should reflect this along with presenting an easy path to making a purchase, or conversion. Depending on the type of product or service, these details usually refer to price, quality, process and timelines.</p>
@@ -116,7 +116,7 @@ function loadNextQuestion() {
     lowest = {
       value: retentionDigit,
       name: "retention",
-      string: `<p>Based on the results of this quiz, the <b>retention</b> stage within your marketing funnel may be the best place to start when developing a video plan.</p>
+      string: `<p>Your biggest area of opportunity is in the <b>retention</b> stage of the marketing funnel.</p>
       <p>The retention stage is the last stop within the marketing funnel and is a tactic used to keep a customer you already have. Within this stage, the customer has used your product or service and may need a reason, or reminder, to come back in the future.</p> 
       <p>At this stage, consumers are expecting more interaction with their brands, which means a brand’s content needs to build an ongoing relationship with its customers. In an era of increased competition (mostly because of the internet), thoughtfully building a video portfolio designed around retaining and delighting your customers is crucial.</p>
       `,
@@ -155,7 +155,7 @@ function loadNextQuestion() {
     </div>
   </div>
   <div class="engagement-funnel-section">
-    <h1 id="video-engagement-funnel" class="section-heading"><span class="thin-fill-span">VIDEO</span> <span class="orange-fill-span">ENGAGEMENT</span> <span class="dark-fill-span">FUNNEL</span></h1>
+    <h1 id="video-engagement-funnel" class="section-heading"><span class="thin-fill-span">VIDEO</span> <span class="orange-fill-span">MARKETING</span> <span class="dark-fill-span">FUNNEL</span></h1>
     <div id="funnel-text" class="funnel-text">The full funnel framework is a handy model for the individual stages a potential customer goes through when making a purchasing decision. Using this framework as a backbone to a video strategy helps place your video marketing assets along the funnel top to bottom. Ideally, potential customers will be able to view a video for your business across each stage of the funnel.Having at least one video per stage is the key to a full video marketing strategy.</div><img src="images/Engagement_Funnel.gif" id="funnel" alt="The video engagement funnel" class="animated-funnel">
   </div>
   <div class="section-3">
