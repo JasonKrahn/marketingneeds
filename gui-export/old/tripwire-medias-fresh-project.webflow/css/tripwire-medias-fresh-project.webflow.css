@@ -1,4 +1,18 @@
-.engagement-funnel-section {
+.hero {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.marketing-funnel-section {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -20,13 +34,13 @@
   align-items: center;
 }
 
-.section-3 {
+.funnel-stage {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin-right: 0px;
-  padding: 25px 85px;
+  padding: 25px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
@@ -53,6 +67,7 @@
 
 .results-intro {
   display: block;
+  margin-top: 29px;
   font-family: Oswald, sans-serif;
   font-size: 2em;
   font-weight: 300;
@@ -119,7 +134,7 @@
   font-weight: 700;
 }
 
-.column {
+.quiz-results {
   display: block;
   margin-bottom: 0px;
   padding-right: 10px;
@@ -127,6 +142,9 @@
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
   -o-object-fit: contain;
   object-fit: contain;
 }
@@ -227,8 +245,12 @@
   height: auto;
   min-height: auto;
   min-width: 600px;
-  margin: 25px;
+  margin: 25px 5px;
   padding: 25px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   border-radius: 14px;
   background-color: #fdfdfd;
 }
@@ -420,6 +442,64 @@
   font-size: 0px;
 }
 
+.utility-page-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100%;
+  max-width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.utility-page-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 260px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+}
+
+.utility-page-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.text-block {
+  font-style: normal;
+  text-decoration: none;
+}
+
+.showcase-button {
+  text-decoration: none;
+}
+
 @media screen and (max-width: 991px) {
   .hero {
     display: -webkit-box;
@@ -428,7 +508,7 @@
     display: flex;
   }
 
-  .engagement-funnel-section {
+  .marketing-funnel-section {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -437,7 +517,7 @@
     margin-bottom: 25px;
   }
 
-  .section-3 {
+  .funnel-stage {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -445,6 +525,10 @@
     margin-top: 25px;
     padding-top: 25px;
     padding-bottom: 25px;
+  }
+
+  .results-intro {
+    margin-top: 29px;
   }
 
   .columns {
@@ -514,15 +598,19 @@
     align-items: flex-start;
   }
 
-  .engagement-funnel-section {
+  .marketing-funnel-section {
     margin-top: 0px;
     padding-right: 0px;
     padding-left: 0px;
   }
 
-  .section-3 {
+  .funnel-stage {
     margin-top: 0px;
     padding: 0px;
+  }
+
+  .results-intro {
+    margin-top: 33px;
   }
 
   .result-header {
@@ -544,7 +632,7 @@
     margin-top: 20px;
   }
 
-  .column {
+  .quiz-results {
     padding-left: 10px;
     -o-object-fit: contain;
     object-fit: contain;
@@ -597,7 +685,7 @@
   }
 
   .card-button {
-    width: 10em;
+    width: 15em;
     padding: 10px 0px;
   }
 
@@ -621,18 +709,19 @@
 }
 
 @media screen and (max-width: 479px) {
-  .engagement-funnel-section {
+  .marketing-funnel-section {
     margin-top: 0px;
     padding-right: 25px;
     padding-left: 25px;
   }
 
-  .section-3 {
+  .funnel-stage {
     padding-right: 10px;
     padding-left: 10px;
   }
 
   .results-intro {
+    margin-top: 34px;
     margin-bottom: 0px;
     font-size: 1.1em;
   }
@@ -658,7 +747,7 @@
     padding-left: 0px;
   }
 
-  .column {
+  .quiz-results {
     padding-right: 0px;
     padding-left: 0px;
     -webkit-align-self: auto;
@@ -707,8 +796,9 @@
   }
 
   .card-button {
-    width: 10em;
+    width: 15em;
     padding: 10px 0px;
+    float: right;
   }
 
   .card-heading {

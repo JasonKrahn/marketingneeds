@@ -142,52 +142,113 @@ function loadNextQuestion() {
     <div id="hero" class="hero">
     <div id="top-banner" class="banner w-container"></div>
     <div class="columns w-row">
-      <div class="column w-col w-col-6 w-col-stack w-col-small-small-stack">
+      <div class="quiz-results w-col w-col-6 w-col-stack w-col-small-small-stack">
         <h2 class="results-intro">YOUR NEXT VIDEO SHOULD FOCUS ON:</h2>
-        <h1 id="result-header" class="result-header"><span style="text-transform: uppercase">${lowest.name}</span>.</h1>
+        <h1 id="result-header" class="result-header"><span style="text-transform: uppercase">${lowest.name}</span></h1>
         <p id="result-text" class="result-text">${lowest.string}</p>
-      </div>
-      <div class="column w-col w-col-6 w-col-stack w-col-small-small-stack">
-        <div class="video-container w-container"></div>
-        <div id="result-showcase" class="video w-video w-embed">${lowest.video}</div>
+        </div>
+        <div class="quiz-results w-col w-col-6 w-col-stack w-col-small-small-stack">
+          <div class="video-container w-container"></div>
+          <div id="result-showcase" class="video w-video w-embed">${lowest.video}</div>
         <div class="video-caption">Here is a showcase of various ${lowest.name} videos Tripwire has developed for a range of clients</div>
+        </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="engagement-funnel-section">
-    <h1 id="video-engagement-funnel" class="section-heading"><span class="thin-fill-span">VIDEO</span> <span class="orange-fill-span">MARKETING</span> <span class="dark-fill-span">FUNNEL</span></h1>
-    <div id="funnel-text" class="funnel-text">The full funnel framework is a handy model for the individual stages a potential customer goes through when making a purchasing decision. Using this framework as a backbone to a video strategy helps place your video marketing assets along the funnel top to bottom. Ideally, potential customers will be able to view a video for your business across each stage of the funnel.Having at least one video per stage is the key to a full video marketing strategy.</div><img src="images/Engagement_Funnel.gif" id="funnel" alt="The video engagement funnel" class="animated-funnel">
-  </div>
-  <div class="section-3">
-    <div class="columns-3 w-row">
-      <div class="blank w-col w-col-1 w-col-stack w-col-small-small-stack w-col-tiny-tiny-stack"></div>
-      <div class="column-5 w-col w-col-10 w-col-stack w-col-small-small-stack w-col-tiny-tiny-stack">
-        <h1 id="funnel-stage" class="section-heading"><span class="thin-fill-span">FUNNEL</span> <span class="orange-fill-span">STAGE</span></h1>
+      <div class="marketing-funnel-section">
+        <h1 id="video-engagement-funnel" class="section-heading"><span class="thin-fill-span">VIDEO</span> <span class="orange-fill-span">ENGAGEMENT</span> <span class="dark-fill-span">FUNNEL</span></h1>
+        <div id="funnel-text" class="funnel-text">The full funnel framework is a handy model for the individual stages a potential customer goes through when making a purchasing decision. Using this framework as a backbone to a video strategy helps place your video marketing assets along the funnel top to bottom. Ideally, potential customers will be able to view a video for your business across each stage of the funnel.Having at least one video per stage is the key to a full video marketing strategy.</div>
+        <div data-w-id="a12269bd-490e-cad4-0741-593b002b2688" data-animation-type="lottie" data-src="documents/data.json" data-loop="0" data-direction="1" data-autoplay="1" data-is-ix2-target="0" data-renderer="svg" data-default-duration="4.75" data-duration="0"></div>
       </div>
-      <div class="blank w-col w-col-1 w-col-stack w-col-small-small-stack w-col-tiny-tiny-stack"></div>
-    </div>
-    <div class="card w-clearfix"><img src="images/awareness-icon.png" loading="eager" alt="Awareness Icon">
-      <h1 class="card-heading">Awareness</h1>
-      <p class="card-copy">Increasing your brand’s overall reach, influence and personal emotional connection with your customers. The goal here is to get people to buy in emotionally and choose to engage with your brand and content online further before you ask them to buy from you or take a higher stake action. Here you’re aiming to connect on a human level, to build trust and encourage affinity with your customers.</p>
-      <a href="#" class="card-button w-button">View More</a>
-    </div>
-    <div class="card w-clearfix"><img src="images/engagement-icon.png" loading="eager" alt="Engagement Icon">
-      <h1 class="card-heading">Engagement</h1>
-      <p class="card-copy">Increasing your brand’s overall reach, influence and personal emotional connection with your customers. The goal here is to get people to buy in emotionally and choose to engage with your brand and content online further before you ask them to buy from you or take a higher stake action. Here you’re aiming to connect on a human level, to build trust and encourage affinity with your customers.</p>
-      <a href="#" class="card-button w-button">View More</a>
-    </div>
-    <div class="card w-clearfix"><img src="images/coversion.png" loading="eager" alt="Conversion Icon">
-      <h1 class="card-heading">Conversion</h1>
-      <p class="card-copy">Increasing your brand’s overall reach, influence and personal emotional connection with your customers. The goal here is to get people to buy in emotionally and choose to engage with your brand and content online further before you ask them to buy from you or take a higher stake action. Here you’re aiming to connect on a human level, to build trust and encourage affinity with your customers.</p>
-      <a href="#" class="card-button w-button">View More</a>
-    </div>
-    <div class="card w-clearfix"><img src="images/Retension.png" loading="eager" alt="Retention Icon">
-      <h1 class="card-heading">Retention</h1>
-      <p class="card-copy">Increasing your brand’s overall reach, influence and personal emotional connection with your customers. The goal here is to get people to buy in emotionally and choose to engage with your brand and content online further before you ask them to buy from you or take a higher stake action. Here you’re aiming to connect on a human level, to build trust and encourage affinity with your customers.</p>
-      <a href="#" class="card-button w-button">View More</a>
-    </div>
-  </div>
-         `;
+      <div class="funnel-stage">
+        <div class="columns-3 w-row">
+          <div class="blank w-col w-col-1 w-col-stack w-col-small-small-stack w-col-tiny-tiny-stack"></div>
+          <div class="column-5 w-col w-col-10 w-col-stack w-col-small-small-stack w-col-tiny-tiny-stack">
+            <h1 id="funnel-stage" class="section-heading"><span class="thin-fill-span">FUNNEL</span> <span class="orange-fill-span">STAGE</span></h1>
+          </div>
+          <div class="blank w-col w-col-1 w-col-stack w-col-small-small-stack w-col-tiny-tiny-stack"></div>
+        </div>
+        <div class="card w-clearfix"><img src="images/awareness-icon.png" loading="eager" alt="Awareness Icon">
+          <h1 class="card-heading">Awareness</h1>
+          <p class="card-copy">Increasing your brand’s overall reach, influence and personal emotional connection with your customers. The goal here is to get people to buy in emotionally and choose to engage with your brand and content online further before you ask them to buy from you or take a higher stake action. Here you’re aiming to connect on a human level, to build trust and encourage affinity with your customers.</p>
+          <a href="#" class="card-button w-inline-block w-lightbox">
+            <div class="showcase-button">Watch Awareness Video Showcase</div>
+            <script type="application/json" class="w-json">{
+      "items": [
+        {
+          "type": "video",
+          "originalUrl": "https://youtube.com/playlist?list=PLWXSPKWN6g12GWqO7WGJCNtrNmiTzONa0",
+          "url": "https://youtube.com/playlist?list=PLWXSPKWN6g12GWqO7WGJCNtrNmiTzONa0",
+          "html": "<iframe class=\"embedly-embed\" src=\"https://cdn.embedly.com/widgets/media.html?src=http%3A%2F%2Fwww.youtube.com%2Fembed%2Fvideoseries%3Flist%3DPLWXSPKWN6g12GWqO7WGJCNtrNmiTzONa0&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPLWXSPKWN6g12GWqO7WGJCNtrNmiTzONa0&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FCnDJT1APo_E%2Fhqdefault.jpg%3Fsqp%3D-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ%3D%3D%26rs%3DAOn4CLBLKZuEm1A_Dbhd8GcmY3rtQHRlLg%26days_since_epoch%3D18739&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=youtube\" width=\"940\" height=\"528\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
+          "thumbnailUrl": "https://i.ytimg.com/vi/CnDJT1APo_E/hqdefault.jpg?sqp=-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ==&rs=AOn4CLBLKZuEm1A_Dbhd8GcmY3rtQHRlLg&days_since_epoch=18739",
+          "width": 940,
+          "height": 528
+        }
+      ]
+    }</script>
+          </a>
+        </div>
+        <div class="card w-clearfix"><img src="images/engagement-icon.png" loading="eager" alt="Engagement Icon">
+          <h1 class="card-heading">Engagement</h1>
+          <p class="card-copy">Increasing your brand’s overall reach, influence and personal emotional connection with your customers. The goal here is to get people to buy in emotionally and choose to engage with your brand and content online further before you ask them to buy from you or take a higher stake action. Here you’re aiming to connect on a human level, to build trust and encourage affinity with your customers.</p>
+          <a href="#" class="card-button w-inline-block w-lightbox">
+            <div class="showcase-button">Watch Engagement Video Showcase</div>
+            <script type="application/json" class="w-json">{
+      "items": [
+        {
+          "type": "video",
+          "originalUrl": "https://youtube.com/playlist?list=PLWXSPKWN6g10VBk8zcvzr0gR84NpMYSll",
+          "url": "https://youtube.com/playlist?list=PLWXSPKWN6g10VBk8zcvzr0gR84NpMYSll",
+          "html": "<iframe class=\"embedly-embed\" src=\"//https:cdn.embedly.com/widgets/media.html?src=http%3A%2F%2Fwww.youtube.com%2Fembed%2Fvideoseries%3Flist%3DPLWXSPKWN6g10VBk8zcvzr0gR84NpMYSll&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPLWXSPKWN6g10VBk8zcvzr0gR84NpMYSll&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FF7Na_71315s%2Fhqdefault.jpg%3Fsqp%3D-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ%3D%3D%26rs%3DAOn4CLBvcj8kBNgr1J00RUOGc8u6yML06A%26days_since_epoch%3D18739&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=youtube\" width=\"940\" height=\"528\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
+          "thumbnailUrl": "https://i.ytimg.com/vi/F7Na_71315s/hqdefault.jpg?sqp=-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ==&rs=AOn4CLBvcj8kBNgr1J00RUOGc8u6yML06A&days_since_epoch=18739",
+          "width": 940,
+          "height": 528
+        }
+      ]
+    }</script>
+          </a>
+        </div>
+        <div class="card w-clearfix"><img src="images/coversion.png" loading="eager" alt="Conversion Icon">
+          <h1 class="card-heading">Conversion</h1>
+          <p class="card-copy">Increasing your brand’s overall reach, influence and personal emotional connection with your customers. The goal here is to get people to buy in emotionally and choose to engage with your brand and content online further before you ask them to buy from you or take a higher stake action. Here you’re aiming to connect on a human level, to build trust and encourage affinity with your customers.</p>
+          <a href="#" class="card-button w-inline-block w-lightbox">
+            <div class="showcase-button">Watch Conversion Video Showcase</div>
+            <script type="application/json" class="w-json">{
+      "items": [
+        {
+          "type": "video",
+          "originalUrl": "https://youtube.com/playlist?list=PLWXSPKWN6g13JUPvoz8Kpd6EBLXh486_i",
+          "url": "https://youtube.com/playlist?list=PLWXSPKWN6g13JUPvoz8Kpd6EBLXh486_i",
+          "html": "<iframe class=\"embedly-embed\" src=\"//https:cdn.embedly.com/widgets/media.html?src=http%3A%2F%2Fwww.youtube.com%2Fembed%2Fvideoseries%3Flist%3DPLWXSPKWN6g13JUPvoz8Kpd6EBLXh486_i&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPLWXSPKWN6g13JUPvoz8Kpd6EBLXh486_i&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FWicnbwSO3fw%2Fhqdefault.jpg%3Fsqp%3D-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ%3D%3D%26rs%3DAOn4CLB9ttMKysmF9kQtJ434Wgk0RrRpsA%26days_since_epoch%3D18739&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=youtube\" width=\"940\" height=\"528\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
+          "thumbnailUrl": "https://i.ytimg.com/vi/WicnbwSO3fw/hqdefault.jpg?sqp=-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ==&rs=AOn4CLB9ttMKysmF9kQtJ434Wgk0RrRpsA&days_since_epoch=18739",
+          "width": 940,
+          "height": 528
+        }
+      ]
+    }</script>
+          </a>
+        </div>
+        <div class="card w-clearfix"><img src="images/Retension.png" loading="eager" alt="Retention Icon">
+          <h1 class="card-heading">Retention</h1>
+          <p class="card-copy">Increasing your brand’s overall reach, influence and personal emotional connection with your customers. The goal here is to get people to buy in emotionally and choose to engage with your brand and content online further before you ask them to buy from you or take a higher stake action. Here you’re aiming to connect on a human level, to build trust and encourage affinity with your customers.</p>
+          <a href="#" class="card-button w-inline-block w-lightbox">
+            <div class="showcase-button">Watch Retention Video Showcase</div>
+            <script type="application/json" class="w-json">{
+      "items": [
+        {
+          "type": "video",
+          "originalUrl": "https://youtube.com/playlist?list=PLWXSPKWN6g101maet8eTeaFVcSNeun98X",
+          "url": "https://youtube.com/playlist?list=PLWXSPKWN6g101maet8eTeaFVcSNeun98X",
+          "html": "<iframe class=\"embedly-embed\" src=\"//https:cdn.embedly.com/widgets/media.html?src=http%3A%2F%2Fwww.youtube.com%2Fembed%2Fvideoseries%3Flist%3DPLWXSPKWN6g101maet8eTeaFVcSNeun98X&display_name=YouTube&url=https%3A%2F%2Fwww.youtube.com%2Fplaylist%3Flist%3DPLWXSPKWN6g101maet8eTeaFVcSNeun98X&image=https%3A%2F%2Fi.ytimg.com%2Fvi%2Fbx-ryAOLHHk%2Fhqdefault.jpg%3Fsqp%3D-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ%3D%3D%26rs%3DAOn4CLA9mWc0jh1u0irEJR2MrbKSyR5DHQ%26days_since_epoch%3D18739&key=96f1f04c5f4143bcb0f2e68c87d65feb&type=text%2Fhtml&schema=youtube\" width=\"940\" height=\"528\" scrolling=\"no\" title=\"YouTube embed\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen=\"true\"></iframe>",
+          "thumbnailUrl": "https://i.ytimg.com/vi/bx-ryAOLHHk/hqdefault.jpg?sqp=-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ==&rs=AOn4CLA9mWc0jh1u0irEJR2MrbKSyR5DHQ&days_since_epoch=18739",
+          "width": 940,
+          "height": 528
+        }
+      ]
+    }</script>
+          </a>
+        </div>
+      </div>
+      `;
     return;
   }
   generateQuestions(currentQuestion);
