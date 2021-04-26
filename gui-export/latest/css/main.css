@@ -83,8 +83,6 @@
   padding-bottom: 20px;
   font-family: Oswald, sans-serif;
   font-size: 690%;
-  text-transform: uppercase;
-
 }
 
 .columns {
@@ -134,8 +132,9 @@
 .orange-fill-span {
   border-style: none;
   border-width: 1px;
+  border-color: #853333;
   font-family: Oswald, sans-serif;
-  color: #e98b37;
+  color: #eaa14d;
   font-size: 1.5em;
   font-weight: 700;
 }
@@ -796,7 +795,6 @@
   .orange-fill-span {
     margin-left: 0px;
     padding-left: 0px;
-    color: #FCAF17;
   }
 
   .quiz-results {

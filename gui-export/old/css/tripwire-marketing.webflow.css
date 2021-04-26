@@ -102,6 +102,10 @@
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   -o-object-fit: contain;
   object-fit: contain;
 }
@@ -500,6 +504,13 @@
   text-decoration: none;
 }
 
+.lottie-animation {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 auto;
+  -ms-flex: 0 auto;
+  flex: 0 auto;
+}
+
 @media screen and (max-width: 991px) {
   .hero {
     display: -webkit-box;
@@ -606,7 +617,7 @@
 
   .funnel-stage {
     margin-top: 0px;
-    padding: 0px;
+    padding: 0px 25px;
   }
 
   .results-intro {
@@ -716,8 +727,8 @@
   }
 
   .funnel-stage {
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 
   .results-intro {
