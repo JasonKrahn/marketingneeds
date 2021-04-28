@@ -4,9 +4,27 @@
     padding: 1rem;
     text-shadow: 0 1px #00000010;
     width: auto;
-    margin: 5rem auto;
+    margin: 3rem auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    margin-top: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     transition: color 500ms ease-in-out, opacity 1000ms ease-in, background-color 500ms linear;
     /* background: linear-gradient(360deg, transparent, #ffffff);
     box-shadow: 1px 1px 1px 1px rgba(123, 123, 123, 0.2);
@@ -14,14 +32,13 @@
   }
   .title {
     margin-top: 0;
-    margin-bottom: 1.8rem;
     color: #FCAF17;
     font-weight: 400;
     font-size: 1.5rem;
     text-align: auto;
   }
   .question {
-    margin: 2rem 0;
+    margin: 1rem 0;
     font-size: 1.2rem;
 
   }
@@ -29,7 +46,7 @@
     padding: 0.5rem;
     color: #00000095;
     background: rgba(255, 255, 255, 0.1);
-    width: 80%;
+    width: 60%;
     border-radius: 3px;
     transition: all 0.3s;
     margin: .4rem 0;
@@ -43,7 +60,7 @@
     padding-left: 2rem;
   }
   .controls > * {
-    margin: 1rem;
+    margin: .3rem;
 	display: inline;
   }
   .funnelimg {
