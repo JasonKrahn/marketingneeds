@@ -164,7 +164,7 @@ function loadNextQuestion() {
 </div>
 <div class="card w-clearfix"><img src="https://marketing-needs-44917.web.app/images/engagement-icon.png" loading="eager" alt="Engagement Icon">
   <h1 class="card-heading">Engagement</h1>
-  <p class="card-copy">By building your community (whether via email list, social media following, subscribers or other method), and positioning your brand as a trusted expert in your field you will be solidifying the brand awareness achieved and moving your customer towards a conversion. The goal here is to create and encourage engagement around helpful content, which provides value for your audience and aims to educate, inspire, or entertain (not to sell). Open the conversation with your ideal customer and become their go-to source for niche.</p>
+  <p class="card-copy">By building your community (whether via email list, social media following, subscribers or other method), and positioning your brand as a trusted expert in your field you will be solidifying the brand awareness achieved and moving your customer towards a conversion. The goal here is to create and encourage engagement around helpful content, which provides value for your audience and aims to educate, inspire, or entertain (not to sell). Open the conversation with your ideal customer and become their go-to source for your niche.</p>
   <a href="https://vimeo.com/showcase/8328080" target="_blank" class="card-button w-inline-block w-lightbox" rel="noopener noreferrer">
     <div class="showcase-button">Watch Engagement Showcase</div>
   </a>
