@@ -186,8 +186,8 @@ function loadNextQuestion() {
         <link rel="prefetch" href="https://www.tripwiremedia.com/tripwire-media-group/contact/?utm_source=marketing-needs&amp;utm_medium=quiz">
       </div>
       <div class="footer">
-        <a href="https://www.tripwiremedia.com/?utm_source=marketing-needs&amp;utm_medium=quiz" class="goback-link">Go back to tripwiremedia.com</a>
-      </div>
+      <a href="https://www.tripwiremedia.com/?utm_source=marketing-needs&amp;utm_medium=quiz" class="goback-link">Go back to tripwiremedia.com</a>
+    </div>
   ;`
   
   if (currentQuestion == totalQuestions) {
