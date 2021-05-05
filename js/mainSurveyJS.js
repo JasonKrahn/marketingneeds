@@ -127,9 +127,9 @@ function loadNextQuestion() {
   //If the quiz is finished then we hide the questions container and show the results
   //            <p>Awareness Score: ${awarenessDigit}/8, Engagement Score: ${engagementDigit}/8 </br>Conversion Score ${conversionDigit}/8, Retention Score ${retentionDigit}/8</p>
   
-  const externalHTML = `<div id="hero" class="hero">
-  <div id="top-banner" class="banner w-container"></div>
-  <div class="columns w-row">
+  const externalHTML = `<div id="hero" class="hero-section">
+  <div id="top-banner" class="top-banner w-container"></div>
+  <div class="results-columns w-row">
     <div class="quiz-results w-col w-col-6 w-col-stack w-col-small-small-stack">
       <h2 class="results-intro">YOUR NEXT VIDEO SHOULD FOCUS ON:</h2>
       <h1 id="result-header" class="result-header">${lowest.name}</h1>
@@ -139,51 +139,55 @@ function loadNextQuestion() {
         <div class="video-container w-container"></div>
         <div id="result-showcase" class="video w-video w-embed">${lowest.video}</div>
         <div class="video-caption">Here is a showcase of various ${lowest.name} videos Tripwire has developed for a range of clients</div>
-    </div>
-  </div>
-</div>
-<div class="marketing-funnel-section">
-<h1 id="video-engagement-funnel" class="section-heading"><span class="thin-fill-span">VIDEO</span> <span class="orange-fill-span">ENGAGEMENT</span> <span class="dark-fill-span">FUNNEL</span></h1>
-<div id="funnel-text" class="funnel-text">The full funnel framework is a handy model for the individual stages a potential customer goes through when making a purchasing decision. Using this framework as a backbone to a video strategy helps place your video marketing assets along the funnel top to bottom. Ideally, potential customers will be able to view a video for your business across each stage of the funnel. Having at least one video per stage is the key to a full video marketing strategy.</div>
-<div class="animated-funnel"><img src="images/Engagement_Funnel.gif"></div>
-</div>
-<div class="funnel-stage">
-<div class="columns-3 w-row">
-  <div class="blank w-col w-col-1 w-col-stack w-col-small-small-stack w-col-tiny-tiny-stack"></div>
-  <div class="column-5 w-col w-col-10 w-col-stack w-col-small-small-stack w-col-tiny-tiny-stack">
-    <h1 id="funnel-stage" class="section-heading"><span class="thin-fill-span">FUNNEL</span> <span class="orange-fill-span">STAGE</span></h1>
-  </div>
-  <div class="blank w-col w-col-1 w-col-stack w-col-small-small-stack w-col-tiny-tiny-stack"></div>
-</div>
-<div class="card w-clearfix"><img src="https://marketing-needs-44917.web.app/images/awareness-icon.png" loading="eager" alt="Awareness Icon">
-  <h1 class="card-heading">Awareness</h1>
-  <p class="card-copy">Increasing your brand’s overall reach, influence, and personal emotional connection with your customers. The goal here is to get people to buy-in emotionally and choose toengage with your brand and content online further before you ask them to buyfrom you or take a higher stake action. Here you are aiming to connect on ahuman level, to build trust and encourage affinity with your customers.</p>
-  <a href="https://vimeo.com/showcase/8327803" target="_blank" class="card-button w-inline-block w-lightbox" rel="noopener noreferrer">
-    <div class="showcase-button">Watch Awareness Showcase</div>
-  </a>
-</div>
-<div class="card w-clearfix"><img src="https://marketing-needs-44917.web.app/images/engagement-icon.png" loading="eager" alt="Engagement Icon">
-  <h1 class="card-heading">Engagement</h1>
-  <p class="card-copy">By building your community (whether via email list, social media following, subscribers or other method), and positioning your brand as a trusted expert in your field you will be solidifying the brand awareness achieved and moving your customer towards a conversion. The goal here is to create and encourage engagement around helpful content, which provides value for your audience and aims to educate, inspire, or entertain (not to sell). Open the conversation with your ideal customer and become their go-to source for your niche.</p>
-  <a href="https://vimeo.com/showcase/8328080" target="_blank" class="card-button w-inline-block w-lightbox" rel="noopener noreferrer">
-    <div class="showcase-button">Watch Engagement Showcase</div>
-  </a>
-</div>
-<div class="card w-clearfix"><img src="https://marketing-needs-44917.web.app/images/coversion.png" loading="eager" alt="Conversion Icon">
-  <h1 class="card-heading">Conversion</h1>
-  <p class="card-copy">Probably the most important goal in a marketing strategy, as without conversions (eg; customers ,subscribers, registrations, sales) you don’t have a business. The goal here is to reduce any friction around a conversion taking place. Deal with any final concerns that a potential customer has to ensure the sale. Improve your conversion ratio by humanising the sales process or overcoming any lingering trust concerns. Here you do need to communicate the rational facts and figures around your product or service, And the end-goal here, is to increase your bottom line.</p>
-  <a href="https://vimeo.com/showcase/8328098" target="_blank" class="card-button w-inline-block w-lightbox" rel="noopener noreferrer">
-    <div class="showcase-button">Watch Conversion Showcase</div>
-  </a>
-</div>
-<div class="card w-clearfix"><img src="https://marketing-needs-44917.web.app/images/Retension.png" loading="eager" alt="Retention Icon">
-  <h1 class="card-heading">Retention</h1>
-  <p class="card-copy">Once a customer is gained it is important to ensure a positive customer experience through the initial post-sale period and onwards toward building a long-term relationship with each customer and therefore an increased lifetime value. The goal here is to surprise, delight and deepen the relationship with your customer to build loyalty and advocacy. Where possible video content implemented for this goal should be personalized, direct and allow for human connection.</p>
-  <a href="https://vimeo.com/showcase/8328122" target="_blank" class="card-button w-inline-block w-lightbox rel="noopener noreferrer">
-    <div class="showcase-button">Watch Retention Showcase</div>
-  </a>
-</div>
-</div>
+        </div>
+        </div>
+      </div>
+      <div class="marketing-funnel-section">
+        <h1 id="video-engagement-funnel" class="section-heading"><span class="thin-fill-span">VIDEO</span> <span class="orange-fill-span">ENGAGEMENT</span> <span class="dark-fill-span">FUNNEL</span></h1>
+        <div id="funnel-text" class="funnel-framework-intro">The full funnel framework is a handy model for the individual stages a potential customer goes through when making a purchasing decision. Using this framework as a backbone to a video strategy helps place your video marketing assets along the funnel top to bottom. Ideally, potential customers will be able to view a video for your business across each stage of the funnel. Having at least one video per stage is the key to a full video marketing strategy.</div><img src="images/Engagement_Funnel.gif" loading="lazy" id="animated-funnel" alt="Video engagement funnel animation shows hierarchy of marketing funnel, top to bottom: awareness, engagement, conversion, and retention" width="1000" class="animated-funnel-graphic">
+      </div>
+      <div class="funnel-stage">
+        <div class="funnel-stage-header w-row">
+          <div class="spacer w-col w-col-1 w-col-stack w-col-small-small-stack w-col-tiny-tiny-stack"></div>
+          <div class="column-5 w-col w-col-10 w-col-stack w-col-small-small-stack w-col-tiny-tiny-stack">
+            <h1 id="funnel-stage" class="section-heading"><span class="thin-fill-span">FUNNEL</span> <span class="orange-fill-span">STAGE</span></h1>
+          </div>
+          <div class="spacer w-col w-col-1 w-col-stack w-col-small-small-stack w-col-tiny-tiny-stack"></div>
+        </div>
+        <div id="awareness-card" class="funnel-details-card w-clearfix"><img src="images/awareness-icon.png" loading="eager" alt="Awareness Icon" class="icons">
+          <h1 id="awareness-card-heading" class="card-heading">Awareness</h1>
+          <p class="card-copy">Increasing yourbrand’s overall reach, influence, and personal emotional connection with yourcustomers. The goal here is to get people to buy-in emotionally and choose toengage with your brand and content online further before you ask them to buyfrom you or take a higher stake action. Here you are aiming to connect on ahuman level, to build trust and encourage affinity with your customers.</p>
+          <a href="https://awareness.tripwiremedia.com/?utm_source=marketing-needs&amp;utm_medium=quiz" target="_blank" class="video-showcase-button w-button">WATCH SHOWCASE</a>
+          <link rel="prefetch" href="https://awareness.tripwiremedia.com/?utm_source=marketing-needs&amp;utm_medium=quiz">
+        </div>
+        <div id="engagement-card" class="funnel-details-card w-clearfix"><img src="images/engagement-icon.png" loading="eager" alt="Engagement Icon" class="icons">
+          <h1 id="engagement-card-heading" class="card-heading">Engagement</h1>
+          <p class="card-copy">By building your community (whether via email list, social media following, subscribers or other method), and positioning your brand as a trusted expert in your field you will be solidifying the brand awareness achieved and moving your customer towards a conversion. The goal here is to create and encourage engagement around helpful content, which provides value for your audience and aims to educate, inspire, or entertain (not to sell). Open the conversation with your ideal customer and become their go-to source for niche.</p>
+          <a href="https://engagement.tripwiremedia.com/?utm_source=marketing-needs&amp;utm_medium=quiz" target="_blank" class="video-showcase-button w-button">WATCH SHOWCASE</a>
+          <link rel="prefetch" href="https://engagement.tripwiremedia.com/?utm_source=marketing-needs&amp;utm_medium=quiz">
+        </div>
+        <div id="conversion-card" class="funnel-details-card w-clearfix"><img src="images/coversion.png" loading="eager" alt="Conversion Icon" class="icons">
+          <h1 id="conversion-card-heading" class="card-heading">Conversion</h1>
+          <p class="card-copy">Probably the most important goal in a marketing strategy, as without conversions (eg; customers ,subscribers, registrations, sales) you don’t have a business. The goal here is to reduce any friction around a conversion taking place. Deal with any final concerns that a potential customer has to ensure the sale. Improve your conversion ratio by humanising the sales process or overcoming any lingering trust concerns. Here you do need to communicate the rational facts and figures around your product or service, And the end-goal here, is to increase your bottom line.</p>
+          <a href="https://conversion.tripwiremedia.com/?utm_source=marketing-needs&amp;utm_medium=quiz" target="_blank" class="video-showcase-button w-button">WATCH SHOWCASE</a>
+          <link rel="prefetch" href="https://conversion.tripwiremedia.com/?utm_source=marketing-needs&amp;utm_medium=quiz">
+        </div>
+        <div id="retention-card" class="funnel-details-card w-clearfix"><img src="images/Retension.png" loading="eager" alt="Retention Icon" class="icons">
+          <h1 id="retention-card-heading" class="card-heading">Retention</h1>
+          <p class="card-copy">Once a customer is gained it is important to ensure a positive customer experience through the initial post-sale period and onwards toward building a long-term relationship with each customer and therefore an increased lifetime value. The goal here is to surprise, delight and deepen the relationship with your customer to build loyalty and advocacy. Where possible video content implemented for this goal should be personalized, direct and allow for human connection.</p>
+          <a href="https://retention.tripwiremedia.com/?utm_source=marketing-needs&amp;utm_medium=quiz" target="_blank" class="video-showcase-button w-button">WATCH SHOWCASE</a>
+          <link rel="prefetch" href="https://retention.tripwiremedia.com/?utm_source=marketing-needs&amp;utm_medium=quiz">
+        </div>
+      </div>
+      <div class="contact">
+        <h1 id="video-engagement-funnel" class="section-heading"><span class="thin-fill-span">LET&#x27;S</span> <span class="orange-fill-span">CHAT</span> </h1>
+        <div id="funnel-text" class="call-to-action">Book a meeting today and let&#x27;s start a deeper discussion on your video marketing</div>
+        <a href="https://www.tripwiremedia.com/tripwire-media-group/contact/?utm_source=marketing-needs&amp;utm_medium=quiz" target="_blank" class="contact-button w-button">CONTACT US</a>
+        <link rel="prefetch" href="https://www.tripwiremedia.com/tripwire-media-group/contact/?utm_source=marketing-needs&amp;utm_medium=quiz">
+      </div>
+      <div class="footer">
+        <a href="https://www.tripwiremedia.com/?utm_source=marketing-needs&amp;utm_medium=quiz" class="goback-link">Go back to tripwiremedia.com</a>
+      </div>
   ;`
   
   if (currentQuestion == totalQuestions) {
