@@ -249,10 +249,34 @@ const sendBtn = document.querySelector('#send');
 
 const db = firestore.collection("contactData");
 
+let validEmail = false;
+
+function validateEmail(email) {
+  var mailformat = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  if (email.match(mailformat)) {
+      sendEmail();
+      return;
+  } else {
+      alert("You have entered an invalid email address!");
+      validEmail= false;
+      return;
+  };
+}
+
+
+
 if (sendBtn) {
-sendBtn.addEventListener('click', function() {
+  sendBtn.addEventListener('click', function() {
+    let userEmail = document.querySelector('#userEmail');
+    let userEmailInput = userEmail.value;
+    validateEmail(userEmailInput);
+  });
+
+
+function sendEmail() {
   let userName = document.querySelector('#userFullName');
   let userEmail = document.querySelector('#userEmail');
+
   let current = new Date();
   // let area = result.childNodes[1].innerText
 
@@ -275,10 +299,12 @@ sendBtn.addEventListener('click', function() {
       area: lowest.name,
   })
   .then(function() {
+    $("#form-body").toggle();
+    $("#successForm").toggle();
       console.log("Data Saved");
   })
   .catch(function(error) {
       console.log(error);
-  });
-})
-};
+  })
+}
+}

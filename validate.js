@@ -1,7 +1,7 @@
 function ValidateEmail(inputText) {
     var mailformat = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (inputText.value.match(mailformat)) {
-        alert("You have entered a valid email address!");
+        alert("Email sent!");
         document.form1.email.focus();
         return true;
     } else {
