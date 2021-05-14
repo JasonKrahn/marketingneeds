@@ -1,8 +1,16 @@
+//set initial variables
+
 let currentQuestion = 0;
 let score = [];
 let selectedAnswersData = [];
 const totalQuestions = questions.length;
+var lowest = "";
+let awarenessDigit = "";
+let engagementDigit = "";
+let conversionDigit = "";
+let retentionDigit = "";
 
+//set variables for html elements
 const container = document.querySelector(".quiz-container");
 const questionEl = document.querySelector(".question");
 const option1 = document.querySelector(".option1");
@@ -14,6 +22,7 @@ const nextButton = document.querySelector(".next");
 const previousButton = document.querySelector(".previous");
 const restartButton = document.querySelector(".restart");
 const result = document.querySelector(".result");
+
 
 //Function to generate question
 function generateQuestions(index) {
@@ -50,16 +59,15 @@ function loadNextQuestion() {
   ////Add the answer score to the score array
   score.push(answerScore);
 
-
   selectedAnswersData.push();
 
   const totalScore = score.reduce((total, currentNum) => total + currentNum);
-  let lowest = "";
 
-  const awarenessDigit = ("" + totalScore)[3];
-  const engagementDigit = ("" + totalScore)[2];
-  const conversionDigit = ("" + totalScore)[1];
-  const retentionDigit = ("" + totalScore)[0];
+  
+    let awarenessDigit = ("" + totalScore)[3];
+    let engagementDigit = ("" + totalScore)[2];
+    let conversionDigit = ("" + totalScore)[1];
+    let retentionDigit = ("" + totalScore)[0];
   
   const lowestCategory = Math.min(
     awarenessDigit,
@@ -67,6 +75,8 @@ function loadNextQuestion() {
     conversionDigit,
     retentionDigit
   );
+
+
 
   if (lowestCategory >= awarenessDigit) {
     lowest = {
@@ -192,6 +202,7 @@ function loadNextQuestion() {
     container.style.display = "none";
     result.innerHTML = externalHTML;
     $("#footer").toggle();
+    return retentionDigit;
   }
   generateQuestions(currentQuestion);
 }
@@ -261,7 +272,7 @@ sendBtn.addEventListener('click', function() {
       result: score,
       time: timeStamp,
       source: source,
-      //area: areaWeakness,
+      area: lowest.name,
   })
   .then(function() {
       console.log("Data Saved");

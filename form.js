@@ -17,14 +17,35 @@ var firestore = firebase.firestore();
 const sendBtn = document.querySelector('#send');
 
 let userName = document.querySelector('#userFullName');
-let userEmail = document.querySelector('#userEmail');
 let userMessage = document.querySelector('#userMessage')
 
-const db = firestore.collection("contactData");
-if (sendBtn) {
+function validateEmail(userEmailInput) {
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(userEmailInput);
+  }
+
+  function validate() {
+    const $result = $("#result");
+    let userEmailInput = $("#userEmail").val();
+    $result.text("");
+  
+    if (validateEmail(userEmailInput)) {
+      $result.text(email + " is valid :)");
+      $result.css("color", "green");
+    } else {
+      $result.text(email + " is not valid :(");
+      $result.css("color", "red");
+    }
+    return false;
+  }
+  
+  $("#validate").on("click", validate);
+
+
+const db = firestore.collection("test");
+if (sendBtn && validateEmail()) {
 sendBtn.addEventListener('click', function() {
     let userNameInput = userName.value;
-    let userEmailInput = userEmail.value;
     let userMessageInput = userMessage.value
 
 // access the database collction
