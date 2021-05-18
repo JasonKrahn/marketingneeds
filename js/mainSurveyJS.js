@@ -5,10 +5,11 @@ let score = [];
 let selectedAnswersData = [];
 const totalQuestions = questions.length;
 var lowest = "";
-let awarenessDigit = "";
-let engagementDigit = "";
-let conversionDigit = "";
-let retentionDigit = "";
+
+let awarenessScore = "";
+let engagementScore = "";
+let converstionScore = "";
+let retentionScore = "";
 
 //set variables for html elements
 const container = document.querySelector(".quiz-container");
@@ -68,6 +69,7 @@ function loadNextQuestion() {
     let engagementDigit = ("" + totalScore)[2];
     let conversionDigit = ("" + totalScore)[1];
     let retentionDigit = ("" + totalScore)[0];
+
   
   const lowestCategory = Math.min(
     awarenessDigit,
@@ -95,7 +97,7 @@ function loadNextQuestion() {
       value: engagementDigit,
       name: "engagement",
       string: `<p>Your biggest area of opportunity is in the <b>engagement</b> stage of your marketing funnel.</p>
-      <p>The engagement (sometimes refered to as <em>consideration</em>) stage is within the middle of the marketing funnel, often the second step on the way to becoming your customer.</p> 
+      <p>The engagement (sometimes referred to as <em>consideration</em>) stage is within the middle of the marketing funnel, often the second step on the way to becoming your customer.</p> 
       <p>Here, the audience is more knowledgeable about their problem or need than they were at the awareness stage, and now they're researching all the potential solutions. They likely don't know how you could help or even that you exist. At this point, we want to grab attention and make them aware of your brand. You don't want to get too heavy with selling yet, but you do want to educate, entertain or otherwise engage your leads.</p>
       <p>At this level, leads are more engaged than they were at the top of the funnel, but they're also becoming more aware of their options, your competitors and how they differ from you.</p>
       `,
@@ -199,10 +201,19 @@ function loadNextQuestion() {
   </div>;`
   
   if (currentQuestion == totalQuestions) {
+    let awarenessScore = awarenessDigit;
+    let engagementScore = engagementDigit;
+    let conversionScore = conversionDigit;
+    let retentionScore = retentionDigit;
     container.style.display = "none";
     result.innerHTML = externalHTML;
     $("#footer").toggle();
-    return retentionDigit;
+    return {
+      awarenessScore,
+      engagementScore,
+      conversionScore,
+      retentionScore
+    }
   }
   generateQuestions(currentQuestion);
 }
